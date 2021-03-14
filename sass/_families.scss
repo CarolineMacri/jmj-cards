@@ -1,0 +1,30 @@
+.families{
+  margin: 5rem;
+  display: grid; 
+  grid-template-columns: repeat(auto-fit,minmax(40rem, min-content));
+  gap: 7rem;
+  justify-items: center;
+  
+  } 
+
+  .family-card{
+
+    &__children{
+      background-color: rgba($color-secondary-light, .3);
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0 2rem; 
+    }
+
+    &__header-image{
+      background-image:linear-gradient( 
+        to bottom,
+        rgba($color-secondary-light, .2), 
+        rgba($color-secondary-light, .3)
+      ),url("/img/OLOC.jpg");
+      background-size: cover;
+    }
+  }

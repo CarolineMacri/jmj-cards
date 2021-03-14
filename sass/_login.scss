@@ -1,0 +1,95 @@
+.section-login {
+  height: 90vh; 
+  background-image: linear-gradient( 
+      to bottom,
+      rgba($color-white, .8), 
+      rgba($color-white, 0.8)
+    ),
+    url('/img/rosary.jpg');  
+  background-size: cover; 
+
+  
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+
+  & *{
+   border-radius: 3px;  
+  }
+}
+
+.login {
+
+  &__form {
+    
+    background-color: rgba($color-primary-light, .9);
+    font-size: 2rem;
+    
+    padding: 5rem;
+    
+    box-shadow: 1px 2px 3px 1px rgba($color-black, 0.6);
+   
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__input {
+    font-size: inherit;
+    
+    margin-top: 1rem;
+    padding: .5rem;
+    
+    border:none;
+    border-bottom: 2px solid transparent;
+ 
+   &:focus {
+      outline: none;
+      border-bottom: 3px solid green;
+    }
+   
+    &:focus:invalid {
+      border-bottom-color: red;
+    }
+
+    &::placeholder{
+      font-size: 1.5rem;
+      color: $color-gray-light-1;
+    }
+  }
+
+  &__button-group{
+    display: flex;
+    padding: 2rem;
+    padding-bottom: 0;
+    justify-content: space-evenly;
+  } 
+
+  &__button {
+    font: inherit;
+    border: none;
+    background-color: $color-primary;
+    color: $color-white;
+ 
+    padding: .3rem 2rem;
+    width: max-content;
+    align-self: center;
+
+    &:hover,
+    &:active,
+    &:focus {
+      outline: none;
+      background-color: $color-primary-dark;
+    }
+  }
+  &__link {
+    color: $color-primary-dark;
+    border-bottom: 2px solid transparent;
+    line-height: 1;
+    font-size: 1.5rem;
+    align-self: center;
+
+    &:hover {
+      border-bottom: 2px solid $color-primary-dark;
+    }
+  }
+}

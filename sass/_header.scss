@@ -1,0 +1,46 @@
+.header{
+  background-color:$color-primary-dark;
+  color:$color-secondary-light;
+  fill:$color-secondary-light;
+  font-style: italic; 
+
+  height: min-content;
+  padding-top: .8rem;
+ 
+  display: flex;
+  align-items: center;
+
+  > *{ 
+    padding:0 1rem;
+    line-height: 1.4;
+  }
+
+  &__icon{
+    width: 6rem;
+    height: 6rem;
+  }
+
+  &__h1{
+    font-weight: normal;
+    padding-bottom: 4px;
+    white-space: nowrap; 
+  } 
+
+  &__subheadings{
+    line-height: 1;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__user{
+    margin: 0rem 2rem;
+    border: 2px solid transparent;
+    transition: all .2; 
+    
+    &:hover{
+      border-bottom: 2px solid $color-secondary-light;
+      cursor: pointer;   
+    }
+  }
+}

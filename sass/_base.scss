@@ -1,0 +1,70 @@
+// COLORS
+$color-primary: #2f4885;
+$color-primary-light: #cfd1e2;
+$color-primary-dark: #1c346e; 
+
+$color-secondary: #c78b37;
+$color-secondary-light: #ffd293;
+$color-secondary-dark: #7c4a03;
+
+$color-tertiary: #c7a337;
+$color-tertiary-light: #ffe493; 
+$color-tertiary-dark: #7c5e03;
+
+$color-gray-light-1: #aaa;
+$color-gray-light-2: #eee;
+
+$color-gray-dark-1: #888;
+$color-gray-dark-2: #666;
+
+$color-black: #000;
+$color-white: #fff;
+
+// FONT
+$font-primary: 'Jost', sans-serif;
+
+// SIZING
+$max-width: 80rem;
+
+// TYPOGRAPHY
+h1 {
+  font-size: 4rem;
+  font-weight: normal;
+}
+h2 {
+  font-size: 2.5rem;
+}
+h3 {
+  font-size: 2rem;
+  font-weight: 300;
+}
+h4 {
+  font-size: 1.75rem;
+}
+p {
+  font-size: 1.5rem;
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0; 
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
+}
+
+body {
+  font-family: $font-primary;
+  color: $color-gray-dark-2;
+  font-weight: normal;
+  line-height: 1.6;
+}
+
+.container {
+  height: 50vh;
+  margin: 0 auto;
+}

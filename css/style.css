@@ -1,0 +1,230 @@
+h1 {
+  font-size: 4rem;
+  font-weight: normal; }
+
+h2 {
+  font-size: 2.5rem; }
+
+h3 {
+  font-size: 2rem;
+  font-weight: 300; }
+
+h4 {
+  font-size: 1.75rem; }
+
+p {
+  font-size: 1.5rem; }
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  font-family: "Jost", sans-serif;
+  color: #666;
+  font-weight: normal;
+  line-height: 1.6; }
+
+.container {
+  height: 50vh;
+  margin: 0 auto; }
+
+.card {
+  box-shadow: 1px 1px 3px 1px rgba(28, 52, 110, 0.2);
+  font-size: 1.5rem;
+  width: max-content;
+  height: max-content;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap; }
+  .card__header-background {
+    background-image: linear-gradient(to bottom, #cfd1e2, #2f4885);
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 0 80%);
+    z-index: 3;
+    height: 5rem; }
+  .card__header-text {
+    font-size: 2rem;
+    white-space: nowrap;
+    color: #ffd293;
+    background-color: #1c346e;
+    transform: skew(-20deg);
+    padding: 0 1rem;
+    position: absolute;
+    top: 1rem;
+    left: 4rem; }
+  .card__outline-box {
+    border: 1px solid rgba(47, 72, 133, 0.5); }
+    .card__outline-box--bottom {
+      border-bottom: 1px solid rgba(47, 72, 133, 0.5); }
+  .card__item {
+    padding: 0 1rem; }
+
+.dropdown {
+  position: relative; }
+  .dropdown__content {
+    position: absolute;
+    display: none;
+    background-color: #cfd1e2;
+    box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.2);
+    width: max-content;
+    padding: 1rem 2rem;
+    right: 0;
+    z-index: 1; }
+  .dropdown__item {
+    color: #1c346e;
+    font-weight: normal;
+    border-bottom: 2px solid transparent; }
+    .dropdown__item:hover {
+      border-bottom-color: #1c346e; }
+  .dropdown:hover .dropdown__content {
+    display: block; }
+
+.header {
+  background-color: #1c346e;
+  color: #ffd293;
+  fill: #ffd293;
+  font-style: italic;
+  height: min-content;
+  padding-top: .8rem;
+  display: flex;
+  align-items: center; }
+  .header > * {
+    padding: 0 1rem;
+    line-height: 1.4; }
+  .header__icon {
+    width: 6rem;
+    height: 6rem; }
+  .header__h1 {
+    font-weight: normal;
+    padding-bottom: 4px;
+    white-space: nowrap; }
+  .header__subheadings {
+    line-height: 1;
+    flex: 1;
+    display: flex;
+    flex-direction: column; }
+  .header__user {
+    margin: 0rem 2rem;
+    border: 2px solid transparent;
+    transition: all .2; }
+    .header__user:hover {
+      border-bottom: 2px solid #ffd293;
+      cursor: pointer; }
+
+.section-login {
+  height: 90vh;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("/img/rosary.jpg");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .section-login * {
+    border-radius: 3px; }
+
+.login__form {
+  background-color: rgba(207, 209, 226, 0.9);
+  font-size: 2rem;
+  padding: 5rem;
+  box-shadow: 1px 2px 3px 1px rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column; }
+
+.login__input {
+  font-size: inherit;
+  margin-top: 1rem;
+  padding: .5rem;
+  border: none;
+  border-bottom: 2px solid transparent; }
+  .login__input:focus {
+    outline: none;
+    border-bottom: 3px solid green; }
+  .login__input:focus:invalid {
+    border-bottom-color: red; }
+  .login__input::placeholder {
+    font-size: 1.5rem;
+    color: #aaa; }
+
+.login__button-group {
+  display: flex;
+  padding: 2rem;
+  padding-bottom: 0;
+  justify-content: space-evenly; }
+
+.login__button {
+  font: inherit;
+  border: none;
+  background-color: #2f4885;
+  color: #fff;
+  padding: .3rem 2rem;
+  width: max-content;
+  align-self: center; }
+  .login__button:hover, .login__button:active, .login__button:focus {
+    outline: none;
+    background-color: #1c346e; }
+
+.login__link {
+  color: #1c346e;
+  border-bottom: 2px solid transparent;
+  line-height: 1;
+  font-size: 1.5rem;
+  align-self: center; }
+  .login__link:hover {
+    border-bottom: 2px solid #1c346e; }
+
+.families {
+  margin: 5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(40rem, min-content));
+  gap: 7rem;
+  justify-items: center; }
+
+.family-card__children {
+  background-color: rgba(255, 210, 147, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2rem; }
+
+.family-card__header-image {
+  background-image: linear-gradient(to bottom, rgba(255, 210, 147, 0.2), rgba(255, 210, 147, 0.3)), url("/img/OLOC.jpg");
+  background-size: cover; }
+
+.footer {
+  background-color: #1c346e;
+  color: #ffd293;
+  fill: #ffd293;
+  font-style: italic;
+  height: min-content;
+  padding-top: 0.8rem;
+  display: flex;
+  align-items: center; }
+  .footer > * {
+    padding: 0 1rem;
+    line-height: 1.4; }
+  .footer__icon {
+    width: 6rem;
+    height: 6rem; }
+  .footer__h1 {
+    font-weight: normal;
+    padding-bottom: 4px;
+    white-space: nowrap; }
+  .footer__subheadings {
+    line-height: 1;
+    flex: 1;
+    display: flex;
+    flex-direction: column; }
+  .footer__user {
+    margin: 0rem 2rem;
+    border: 2px solid transparent;
+    transition: all 0.2; }
+    .footer__user:hover {
+      border-bottom: 2px solid #ffd293;
+      cursor: pointer; }
