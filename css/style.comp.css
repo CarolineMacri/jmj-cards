@@ -63,20 +63,11 @@ body {
     border: 1px solid rgba(47, 72, 133, 0.5); }
     .card__outline-box--bottom {
       border-bottom: 1px solid rgba(47, 72, 133, 0.5); }
-  .card__column {
-    min-width: 20rem; }
-    .card__column--small {
-      min-width: 20rem; }
-    .card__column--medium {
-      min-width: 30rem; }
-    .card__column--large {
-      min-width: 40rem; }
   .card__item {
     padding: 0 1rem; }
 
 .dropdown {
-  position: relative;
-  background-color: #cfd1e2; }
+  position: relative; }
   .dropdown__content {
     position: absolute;
     display: none;
@@ -226,29 +217,6 @@ body {
 .family-card__header-image {
   background-image: linear-gradient(to bottom, rgba(255, 210, 147, 0.2), rgba(255, 210, 147, 0.3)), url("/img/OLOC.jpg");
   background-size: cover; }
-
-.family {
-  margin: 5rem; }
-  .family__parents {
-    padding: 5rem;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 7rem; }
-  .family__children {
-    padding: 5rem;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 7rem; }
-
-.class {
-  display: flex; }
-  .class__time {
-    flex: 1;
-    text-align: right; }
-  .class__name {
-    flex: 2;
-    padding-left: 1rem;
-    text-align: left; }
 
 .footer {
   background-color: #1c346e;

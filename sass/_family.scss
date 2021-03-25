@@ -1,0 +1,31 @@
+.family{
+  margin: 5rem;
+  
+  &__parents {
+  padding: 5rem; 
+  display: flex; 
+  flex-wrap: wrap;
+  gap: 7rem;
+  }  
+  &__children {
+    padding: 5rem; 
+    display: flex; 
+    flex-wrap: wrap;
+    gap: 7rem;
+    }  
+}
+
+.class{
+  display:flex;
+
+  &__time{
+    flex:1;
+    text-align: right;
+  }
+
+  &__name{
+    flex: 2;
+    padding-left: 1rem;
+    text-align: left;
+  }
+}
