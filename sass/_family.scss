@@ -1,15 +1,23 @@
 .family{
   margin: 5rem;
+  padding: 2rem 5rem;
+  background-color: $color-tertiary-extra-light;
+
+  &__title{
+    text-align: center;
+  }
   
   &__parents {
   padding: 5rem; 
   display: flex; 
+  justify-content: center;
   flex-wrap: wrap;
   gap: 7rem;
   }  
   &__children {
     padding: 5rem; 
     display: flex; 
+    justify-content: center;
     flex-wrap: wrap;
     gap: 7rem;
     }  

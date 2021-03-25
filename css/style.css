@@ -37,6 +37,7 @@ body {
   margin: 0 auto; }
 
 .card {
+  background-color: white;
   box-shadow: 1px 1px 3px 1px rgba(28, 52, 110, 0.2);
   font-size: 1.5rem;
   width: max-content;
@@ -228,15 +229,21 @@ body {
   background-size: cover; }
 
 .family {
-  margin: 5rem; }
+  margin: 5rem;
+  padding: 2rem 5rem;
+  background-color: #fffbed; }
+  .family__title {
+    text-align: center; }
   .family__parents {
     padding: 5rem;
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 7rem; }
   .family__children {
     padding: 5rem;
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 7rem; }
 
