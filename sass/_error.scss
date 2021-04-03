@@ -1,0 +1,23 @@
+.error{
+  margin: auto;
+  width: max-content;
+  height: 100vh;
+  padding-bottom: 10rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &__heading{
+    border-bottom: 2px solid $color-secondary;
+  }
+  &__message{
+    margin: 3rem;
+    border-bottom: 2px solid $color-primary;
+    text-align: center;
+    font-size: 4rem;
+    transform: skewX(-20deg)
+
+  }
+}

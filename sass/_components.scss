@@ -63,24 +63,38 @@
 
   &__item{
     padding: 0 1rem; 
+
+    &--center{
+      text-align:center;
+    }
+    &--left{
+      text-align:left;
+    }
+    &--right{
+      text-align:right;
+    }
   }   
 }
 
 .dropdown{
   position:relative;
-  background-color: $color-primary-light;
+  background-color:inherit;
+  display: flex;
+  justify-content: center;
+  border: 1px solid black;
+  padding: .5rem;
+  cursor: pointer;
 
   &__content{
     position: absolute;
     display: none;
  
-    background-color: $color-primary-light;
+    background-color:white;
     box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, .2); 
 
     width: max-content;
     padding: 1rem 2rem;
-
-    right: 0;
+    top: 3rem;
     z-index: 1;
   }
 

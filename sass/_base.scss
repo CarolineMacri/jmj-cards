@@ -1,6 +1,7 @@
 // COLORS
 $color-primary: #2f4885;
 $color-primary-light: #cfd1e2;
+$color-primary-extra-light:#f8f8fb;
 $color-primary-dark: #1c346e; 
 
 $color-secondary: #c78b37;
@@ -9,7 +10,7 @@ $color-secondary-dark: #7c4a03;
 
 $color-tertiary: #c7a337;
 $color-tertiary-light: #ffe493; 
-$color-tertiary-extra-light: #fffbed; 
+$color-tertiary-extra-light: #fffbf0; 
 $color-tertiary-dark: #7c5e03;
 
 $color-gray-light-1: #aaa;
@@ -33,7 +34,7 @@ h1 {
   font-weight: normal;
 }
 h2 {
-  font-size: 2.5rem;
+  font-size: 2.5rem; 
 }
 h3 {
   font-size: 2rem;
@@ -66,6 +67,18 @@ body {
 }
 
 .container {
-  height: 50vh;
   margin: 0 auto;
+}
+
+.page{
+  display: flex;
+
+  &__nav{
+    width: 20rem;
+    height: 100vh; 
+  } 
+
+  &__content{
+    flex:1;
+  }
 }

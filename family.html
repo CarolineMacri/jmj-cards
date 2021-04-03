@@ -23,8 +23,24 @@
   </head>
 
   <body>
-    <section class="family">
+    <section class="family page__content">
       <h1 class="family__title">The Smith Family</h1>
+      <h3 class="dropdown family__dropdown">
+        <div id="selectedYear">2021-2022</div>
+        <div class="dropdown__content">
+          <p class="dropdown__item" onclick="setYear(this)">2021-2022</p>
+          <script>
+            function setYear(param) {
+              document.getElementById("selectedYear").innerHTML= param.innerHTML
+              ;
+            }
+          </script>
+          <p class="dropdown__item" onclick="setYear(this)">2020-2021</p>
+          <p class="dropdown__item" onclick="setYear(this)">2019-2020</p>
+          <p class="dropdown__item" onclick="setYear(this)">2018-2019</p>
+          <p class="dropdown__item" onclick="setYear(this)">2017-2018</p>
+        </div>
+      </h3>
 
       <div class="family__parents">
         <div class="card card__outline-box">
@@ -44,7 +60,7 @@
             </div>
           </div>
         </div>
-  
+
         <div class="card card__outline-box">
           <div class="card__column--medium">
             <div class="card__header-background"></div>
@@ -62,7 +78,6 @@
             </div>
           </div>
         </div>
-
       </div>
 
       <div class="family__children">
@@ -70,186 +85,170 @@
           <div class="card__column--small">
             <div class="card__header-background"></div>
             <div class="card__header-text">Ruth-Anne</div>
-            <div class="card__outline-box--bottom family__title">
-
-              <div class="card__item">Gender: F</div>
-              <div class="card__item">Grade: 10th</div>
-            </div>
             <div class="card__outline-box--bottom">
-
+              <div class="card__item--center">Gender: F</div>
+              <div class="card__item--center">Grade: 10th</div>
+            </div>
+            <div class="card__outline-box--bottom class__group">
               <div class="card__item">
                 <div class="class">
-                  <div class="class__time">9 AM | </div>
+                  <div class="class__time">9 AM |</div>
                   <div class="class__name">Reading is Fun</div>
                 </div>
               </div>
               <div class="card__item">
                 <div class="class">
-                  <div class="class__time">10 AM | </div>
+                  <div class="class__time">10 AM |</div>
                   <div class="class__name">--</div>
                 </div>
               </div>
               <div class="card__item">
                 <div class="class">
-                  <div class="class__time">11 AM | </div>
+                  <div class="class__time">11 AM |</div>
                   <div class="class__name">--</div>
                 </div>
               </div>
               <div class="card__item">
                 <div class="class">
-                  <div class="class__time">1 PM | </div>
+                  <div class="class__time">1 PM |</div>
                   <div class="class__name">Math is Great</div>
                 </div>
               </div>
               <div class="card__item">
                 <div class="class">
-                  <div class="class__time">2PM | </div>
+                  <div class="class__time">2PM |</div>
                   <div class="class__name">Science Rules</div>
                 </div>
               </div>
-              
             </div>
-          </div>  
+          </div>
         </div>
         <div class="card card__outline-box">
           <div class="card__column--small">
             <div class="card__header-background"></div>
             <div class="card__header-text">Timothy</div>
-            <div class="card__outline-box--bottom family__title">
-
-              <div class="card__item">Gender: M</div>
-              <div class="card__item">Grade: 8th</div>
-            </div>
             <div class="card__outline-box--bottom">
-
+              <div class="card__item--center">Gender: M</div>
+              <div class="card__item--center">Grade: 8th</div>
+            </div>
+            <div class="card__outline-box--bottom class__group">
               <div class="card__item">
                 <div class="class">
-                  <div class="class__time">9 AM | </div>
+                  <div class="class__time">9 AM |</div>
                   <div class="class__name">---</div>
                 </div>
               </div>
               <div class="card__item">
                 <div class="class">
-                  <div class="class__time">10 AM | </div>
+                  <div class="class__time">10 AM |</div>
                   <div class="class__name">God is Great</div>
                 </div>
               </div>
               <div class="card__item">
                 <div class="class">
-                  <div class="class__time">11 AM | </div>
+                  <div class="class__time">11 AM |</div>
                   <div class="class__name">Hilarious History</div>
                 </div>
               </div>
               <div class="card__item">
                 <div class="class">
-                  <div class="class__time">1 PM | </div>
+                  <div class="class__time">1 PM |</div>
                   <div class="class__name">Awesome Art</div>
                 </div>
               </div>
               <div class="card__item">
                 <div class="class">
-                  <div class="class__time">2PM | </div>
+                  <div class="class__time">2PM |</div>
                   <div class="class__name">---</div>
                 </div>
               </div>
-              
             </div>
-          </div>  
+          </div>
         </div>
         <div class="card card__outline-box">
           <div class="card__column--small">
             <div class="card__header-background"></div>
             <div class="card__header-text">Anna-Therese</div>
-            <div class="card__outline-box--bottom family__title">
-
-              <div class="card__item">Gender: F</div>
-              <div class="card__item">Grade: 5th</div>
-            </div>
             <div class="card__outline-box--bottom">
-
+              <div class="card__item--center">Gender: F</div>
+              <div class="card__item--center">Grade: 5th</div>
+            </div>
+            <div class="card__outline-box--bottom class__group">
               <div class="card__item">
                 <div class="class">
-                  <div class="class__time">9 AM | </div>
+                  <div class="class__time">9 AM |</div>
                   <div class="class__name">LOL Literature</div>
                 </div>
               </div>
               <div class="card__item">
                 <div class="class">
-                  <div class="class__time">10 AM | </div>
+                  <div class="class__time">10 AM |</div>
                   <div class="class__name">Creative Crafting</div>
                 </div>
               </div>
               <div class="card__item">
                 <div class="class">
-                  <div class="class__time">11 AM | </div>
+                  <div class="class__time">11 AM |</div>
                   <div class="class__name">My Mother Mary</div>
                 </div>
               </div>
               <div class="card__item">
                 <div class="class">
-                  <div class="class__time">1 PM | </div>
+                  <div class="class__time">1 PM |</div>
                   <div class="class__name">---</div>
                 </div>
               </div>
               <div class="card__item">
                 <div class="class">
-                  <div class="class__time">2PM | </div>
+                  <div class="class__time">2PM |</div>
                   <div class="class__name">---</div>
                 </div>
               </div>
-              
             </div>
-          </div>  
+          </div>
         </div>
         <div class="card card__outline-box">
           <div class="card__column--small">
             <div class="card__header-background"></div>
             <div class="card__header-text">Xavier</div>
-            <div class="card__outline-box--bottom family__title">
-
-              <div class="card__item">Gender: M</div>
-              <div class="card__item">Grade: K</div>
-            </div>
             <div class="card__outline-box--bottom">
-
+              <div class="card__item--center">Gender: M</div>
+              <div class="card__item--center">Grade: K</div>
+            </div>
+            <div class="card__outline-box--bottom class__group">
               <div class="card__item">
                 <div class="class">
-                  <div class="class__time">9 AM | </div>
+                  <div class="class__time">9 AM |</div>
                   <div class="class__name">---</div>
                 </div>
               </div>
               <div class="card__item">
                 <div class="class">
-                  <div class="class__time">10 AM | </div>
+                  <div class="class__time">10 AM |</div>
                   <div class="class__name">Math for Minions</div>
                 </div>
               </div>
               <div class="card__item">
                 <div class="class">
-                  <div class="class__time">11 AM | </div>
+                  <div class="class__time">11 AM |</div>
                   <div class="class__name">---</div>
                 </div>
               </div>
               <div class="card__item">
                 <div class="class">
-                  <div class="class__time">1 PM | </div>
+                  <div class="class__time">1 PM |</div>
                   <div class="class__name">Junior DaVinci's</div>
                 </div>
               </div>
               <div class="card__item">
                 <div class="class">
-                  <div class="class__time">2PM | </div>
+                  <div class="class__time">2PM |</div>
                   <div class="class__name">Jesus in My Heart</div>
                 </div>
               </div>
-              
             </div>
-          </div>  
+          </div>
         </div>
-
-   
-     
-
       </div>
     </section>
   </body>

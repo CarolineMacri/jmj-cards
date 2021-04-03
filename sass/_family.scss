@@ -1,12 +1,16 @@
 .family{
-  margin: 5rem;
   padding: 2rem 5rem;
   background-color: $color-tertiary-extra-light;
 
   &__title{
     text-align: center;
   }
-  
+  &__dropdown{
+    background-color:white;
+    width: max-content;
+    text-align: center;
+    margin: 0 auto;
+  }
   &__parents {
   padding: 5rem; 
   display: flex; 
@@ -25,6 +29,10 @@
 
 .class{
   display:flex;
+
+  &__group{
+    background-color:$color-primary-extra-light;
+  }
 
   &__time{
     flex:1;
