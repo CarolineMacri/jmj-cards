@@ -156,6 +156,7 @@ body {
     color: #ffd293;
     background-color: #1c346e;
     transform: skew(-20deg);
+    z-index: 20;
     padding: 0 1rem;
     position: absolute;
     top: 1rem;
@@ -166,7 +167,8 @@ body {
       border-bottom: 1px solid rgba(47, 72, 133, 0.5); }
   .form__row {
     width: 100%;
-    display: flex; }
+    display: flex;
+    flex-wrap: wrap; }
   .form__column {
     flex: 1; }
     .form__column--small {
@@ -191,7 +193,8 @@ body {
     background-color: white;
     margin: 0 1rem 1rem 1rem;
     padding: 0 1rem;
-    outline: 1px solid #ffd293; }
+    outline: 1px solid #ffd293;
+    display: block; }
 
 .header {
   background-color: #1c346e;

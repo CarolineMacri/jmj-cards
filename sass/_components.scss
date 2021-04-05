@@ -167,6 +167,7 @@
     color: $color-secondary-light;
     background-color: $color-primary-dark;
     transform: skew(-20deg);
+    z-index: 20;
 
     padding: 0 1rem;
 
@@ -186,6 +187,7 @@
   &__row{
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
   }
 
   &__column {
@@ -228,5 +230,6 @@
     margin: 0 1rem 1rem 1rem;
     padding: 0 1rem;
     outline: 1px solid $color-secondary-light;
+    display: block;
   }
 }
