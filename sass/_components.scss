@@ -1,29 +1,28 @@
-.card{
+.card {
   background-color: white;
-  box-shadow: 1px 1px 3px 1px rgba($color-primary-dark, .2); 
-  
+  box-shadow: 1px 1px 3px 1px rgba($color-primary-dark, 0.2);
+
   font-size: 1.5rem;
-  width: max-content;   
-  height: max-content; 
+  width: max-content;
+  height: max-content;
 
-  position: relative;  
-  display: flex;  
-  flex-wrap: wrap;      
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
 
-  &__header-background{ 
-    background-image:linear-gradient(  
+  &__header-background {
+    background-image: linear-gradient(
       to bottom,
-      rgba($color-primary-light, 1), 
+      rgba($color-primary-light, 1),
       rgba($color-primary, 1)
     );
-    clip-path: polygon( 0 0, 100% 0, 100% 50%, 0 80%);
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 0 80%);
 
     z-index: 3;
-    height: 5rem;   
-
+    height: 5rem;
   }
 
-  &__header-text{ 
+  &__header-text {
     font-size: 2rem;
     white-space: nowrap;
     color: $color-secondary-light;
@@ -36,61 +35,59 @@
     top: 1rem;
     left: 4rem;
   }
- 
-  &__outline-box{
-    border: 1px solid rgba($color-primary, .5);
 
-    &--bottom{
-      border-bottom: 1px solid rgba($color-primary, .5);
+  &__outline-box {
+    border: 1px solid rgba($color-primary, 0.5);
+
+    &--bottom {
+      border-bottom: 1px solid rgba($color-primary, 0.5);
     }
-
   }
 
-  &__column{
-    
+  &__column {
     min-width: 20rem;
 
-    &--small{
+    &--small {
       min-width: 20rem;
     }
-    &--medium{
+    &--medium {
       min-width: 30rem;
     }
-    &--large{
+    &--large {
       min-width: 40rem;
     }
   }
 
-  &__item{
-    padding: 0 1rem; 
+  &__item {
+    padding: 0 1rem;
 
-    &--center{
-      text-align:center;
+    &--center {
+      text-align: center;
     }
-    &--left{
-      text-align:left;
+    &--left {
+      text-align: left;
     }
-    &--right{
-      text-align:right;
+    &--right {
+      text-align: right;
     }
-  }   
+  }
 }
 
-.dropdown{
-  position:relative;
-  background-color:inherit;
+.dropdown {
+  position: relative;
+  background-color: inherit;
   display: flex;
   justify-content: center;
   border: 1px solid black;
-  padding: .5rem;
+  padding: 0.5rem;
   cursor: pointer;
 
-  &__content{
+  &__content {
     position: absolute;
     display: none;
- 
-    background-color:white;
-    box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, .2); 
+
+    background-color: white;
+    box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.2);
 
     width: max-content;
     padding: 1rem 2rem;
@@ -98,17 +95,17 @@
     z-index: 1;
   }
 
-  &__item{
+  &__item {
     color: $color-primary-dark;
     font-weight: normal;
     border-bottom: 2px solid transparent;
 
-    &:hover{
+    &:hover {
       border-bottom-color: $color-primary-dark;
     }
   }
 
-  &:hover .dropdown__content{
+  &:hover .dropdown__content {
     display: block;
   }
 }
@@ -122,7 +119,7 @@
   z-index: 9999;
   color: #fff;
   font-size: 2rem;
-  font-weight: 400; 
+  font-weight: 400;
   text-align: center;
   border-bottom-left-radius: 2px;
   border-bottom-right-radius: 2px;
@@ -133,7 +130,103 @@
     background-color: green;
   }
   &--error {
-    background-color: red; 
+    background-color: red;
   }
 }
 
+.form {
+  background-color: $color-tertiary-extra-light;
+  box-shadow: 1px 1px 3px 1px rgba($color-primary-dark, 0.2);
+
+  font-size: 3rem;
+  width: 50%;
+  height: max-content;
+
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  &__header-background {
+    background-image: linear-gradient(
+      to bottom,
+      rgba($color-primary-light, 1),
+      rgba($color-primary, 1)
+    );
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 0 80%);
+
+    z-index: 3;
+    height: 10rem;
+    flex:1;
+  
+  }
+
+  &__header-text {
+    font-size: 3rem;
+    white-space: nowrap;
+    color: $color-secondary-light;
+    background-color: $color-primary-dark;
+    transform: skew(-20deg);
+
+    padding: 0 1rem;
+
+    position: absolute;
+    top: 1rem;
+    left: 4rem;
+  }
+
+  &__outline-box {
+    border: 1px solid rgba($color-primary, 0.5);
+
+    &--bottom {
+      border-bottom: 1px solid rgba($color-primary, 0.5);
+    }
+  }
+
+  &__row{
+    width: 100%;
+    display: flex;
+  }
+
+  &__column {
+    flex: 1;
+
+    &--small {
+      min-width: 20rem;
+    }
+    &--medium {
+      min-width: 30rem;
+    }
+    &--large {
+      min-width: 40rem;
+    }
+  }
+
+  &__item {
+    padding: 0 1rem;
+
+    &--center {
+      text-align: center;
+    }
+    &--left {
+      text-align: left;
+    }
+    &--right {
+      text-align: right;
+    }
+  }
+
+  
+
+  &__label{
+    font-size: 1.5rem;
+    color: $color-secondary-dark; 
+  }
+  &__input{
+    font-size: 2rem;
+    background-color:white;
+    margin: 0 1rem 1rem 1rem;
+    padding: 0 1rem;
+    outline: 1px solid $color-secondary-light;
+  }
+}
