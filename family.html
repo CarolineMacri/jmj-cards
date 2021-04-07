@@ -25,22 +25,16 @@
   <body>
     <section class="family page__content">
       <h1 class="family__title">The Smith Family</h1>
-      <h3 class="dropdown family__dropdown">
-        <div id="selectedYear">2021-2022</div>
-        <div class="dropdown__content">
-          <p class="dropdown__item" onclick="setYear(this)">2021-2022</p>
-          <script>
-            function setYear(param) {
-              document.getElementById("selectedYear").innerHTML= param.innerHTML
-              ;
-            }
-          </script>
-          <p class="dropdown__item" onclick="setYear(this)">2020-2021</p>
-          <p class="dropdown__item" onclick="setYear(this)">2019-2020</p>
-          <p class="dropdown__item" onclick="setYear(this)">2018-2019</p>
-          <p class="dropdown__item" onclick="setYear(this)">2017-2018</p>
-        </div>
-      </h3>
+      <div class="year-selector">
+
+        <select name="year-selector" id="yearSelector">
+          <option value="2021-2022">2021-2022</option>
+          <option value="2020-2021">2020-2021</option>
+          <option value="2019-2020">2019-2020</option>
+          <option value="2018-2019">2018-2019</option>
+      
+        </select>
+      </div>
 
       <div class="family__parents">
         <div class="card card__outline-box">

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1"
+    />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      rel="shortcut icon"
+      type="image/svg"
+      href="../img/JMJ-open-book.svg"
+    />
+    <title>JMJ Co-op</title>
+  </head>
+
+  <body>
+    <section class="year-picker page__content">
+     
+
+      <input list="" name="option" id="input" autocomplete="off" />
+
+      <datalist id="datalist">
+        <option>Carrots</option>
+        <option>Peas</option>
+        <option>Beans</option>
+      </datalist>
+
+      <section>
+        <select name="yearSelect" id="yearSelect">
+          <option class='option--red' value="2021-2022">2021-2022</option>
+          <option value="2019-2018">2019-2020</option>
+          <option value="2018-2019">2018-2019</option>
+          <option value="2020-2021">2020-2021</option>
+        </select>
+      </section>
+      <script>
+        input.onfocus = function () {
+          datalist.style.display = 'block';
+        };
+
+        for (let option of datalist.options) {
+          option.onclick = function () {
+            input.value = this.value;
+            datalist.style.display = 'none';
+          };
+        }
+
+        datalist.style.width = input.offsetWidth + 'px';
+        datalist.style.left = input.offsetLeft + 'px';
+        datalist.style.top = input.offsetTop + input.offsetHeight + 'px';
+      </script>
+
+    </section>
+  </body>
+</html>

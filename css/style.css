@@ -109,6 +109,7 @@ body {
     font-weight: normal;
     border-bottom: 2px solid transparent; }
     .dropdown__item:hover {
+      text-decoration: none;
       border-bottom-color: #1c346e; }
   .dropdown:hover .dropdown__content {
     display: block; }
@@ -138,8 +139,10 @@ body {
   background-color: #fffbf0;
   box-shadow: 1px 1px 3px 1px rgba(28, 52, 110, 0.2);
   font-size: 3rem;
+  min-width: min-content;
   width: 50%;
   height: max-content;
+  margin: auto;
   position: relative;
   display: flex;
   flex-wrap: wrap;
@@ -185,6 +188,20 @@ body {
       text-align: left; }
     .form__item--right {
       text-align: right; }
+  .form__button {
+    background-color: #1c346e;
+    color: #ffd293;
+    font-size: 1.5rem;
+    padding: 1px 2rem;
+    flex: 1;
+    font: inherit;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 2rem; }
+    .form__button:hover, .form__button:active, .form__button:focus {
+      outline: none;
+      background-color: #2f4885;
+      cursor: pointer; }
   .form__label {
     font-size: 1.5rem;
     color: #7c4a03; }
@@ -193,8 +210,31 @@ body {
     background-color: white;
     margin: 0 1rem 1rem 1rem;
     padding: 0 1rem;
-    outline: 1px solid #ffd293;
+    border: 1px solid #c78b37;
     display: block; }
+    .form__input:focus {
+      outline: none;
+      border-bottom: 3px solid green; }
+    .form__input:focus:invalid {
+      border-bottom-color: red; }
+    .form__input::placeholder {
+      font-size: 1.5rem;
+      color: #aaa; }
+
+select {
+  border: 1px solid #c78b37;
+  color: #2f4885;
+  outline: none;
+  font-size: 2rem;
+  padding: 3px;
+  background-color: white; }
+
+option {
+  font-size: 1.5rem;
+  padding-left: 1rem; }
+
+.year-select {
+  margin: auto; }
 
 .header {
   background-color: #1c346e;
@@ -223,9 +263,10 @@ body {
   .header__user {
     margin: 0rem 2rem;
     border: 2px solid transparent;
-    transition: all .2; }
+    transition: all .2;
+    color: #c78b37; }
     .header__user:hover {
-      border-bottom: 2px solid #ffd293;
+      color: #ffd293;
       cursor: pointer; }
 
 .section-login {
@@ -359,6 +400,21 @@ body {
     flex: 2;
     padding-left: 1rem;
     text-align: left; }
+
+.year-selector {
+  display: flex;
+  justify-content: center; }
+
+.user-profile {
+  width: 100%;
+  margin: 5rem 0; }
+
+.update-password {
+  width: 100%;
+  margin: 5rem 0; }
+  .update-password__form {
+    width: max-content;
+    margin: 3rem auto; }
 
 .side-nav {
   background-color: #2f4885;

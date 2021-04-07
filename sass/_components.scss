@@ -101,6 +101,7 @@
     border-bottom: 2px solid transparent;
 
     &:hover {
+      text-decoration: none;
       border-bottom-color: $color-primary-dark;
     }
   }
@@ -139,8 +140,10 @@
   box-shadow: 1px 1px 3px 1px rgba($color-primary-dark, 0.2);
 
   font-size: 3rem;
+  min-width: min-content;
   width: 50%;
   height: max-content;
+  margin: auto;
 
   position: relative;
   display: flex;
@@ -157,8 +160,7 @@
 
     z-index: 3;
     height: 10rem;
-    flex:1;
-  
+    flex: 1;
   }
 
   &__header-text {
@@ -184,7 +186,7 @@
     }
   }
 
-  &__row{
+  &__row {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -218,18 +220,65 @@
     }
   }
 
-  
-
-  &__label{
+  &__button {
+    background-color: $color-primary-dark;
+    color: $color-secondary-light;
     font-size: 1.5rem;
-    color: $color-secondary-dark; 
+    padding: 1px 2rem;
+    flex: 1;
+    font: inherit;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+
+    &:hover,
+    &:active,
+    &:focus {
+      outline: none;
+      background-color: $color-primary;
+      cursor: pointer;
+    }
   }
-  &__input{
+
+  &__label {
+    font-size: 1.5rem;
+    color: $color-secondary-dark;
+  }
+  &__input {
     font-size: 2rem;
-    background-color:white;
+    background-color: white;
     margin: 0 1rem 1rem 1rem;
     padding: 0 1rem;
-    outline: 1px solid $color-secondary-light;
+    border: 1px solid $color-secondary;
     display: block;
+
+    &:focus {
+      outline: none;
+      border-bottom: 3px solid green;
+    }
+    &:focus:invalid {
+      border-bottom-color: red;
+    }
+    &::placeholder {
+      font-size: 1.5rem;
+      color: $color-gray-light-1;
+    }
   }
+}
+
+select {
+  border: 1px solid $color-secondary;
+  color: $color-primary;
+  outline: none;
+  font-size: 2rem;
+  padding: 3px;
+  background-color:white;
+}
+option {
+  font-size: 1.5rem;
+  padding-left: 1rem;
+}
+
+.year-select{
+  margin:auto;
 }

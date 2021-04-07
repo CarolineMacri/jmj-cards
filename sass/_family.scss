@@ -6,11 +6,11 @@
     text-align: center;
   }
   &__dropdown{
-    background-color:white;
+    background-color:white; 
     width: max-content;
     text-align: center;
     margin: 0 auto;
-  }
+  } 
   &__parents {
   padding: 5rem; 
   display: flex; 
@@ -23,7 +23,9 @@
     display: flex; 
     justify-content: center;
     flex-wrap: wrap;
+  
     gap: 7rem;
+    
     }  
 }
 
@@ -44,4 +46,9 @@
     padding-left: 1rem;
     text-align: left;
   }
+}
+
+.year-selector{
+  display: flex;
+  justify-content: center;
 }
