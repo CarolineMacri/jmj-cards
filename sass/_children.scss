@@ -1,0 +1,44 @@
+.children{
+  display:grid;
+  width: max-content;
+  grid-template-columns: auto;
+  font-size: 2rem;
+  margin: 5rem auto;
+  
+  &__row{
+    display: grid;
+    grid-template-columns: 20rem 7rem 7rem;
+    &:hover{
+      background-color: $color-primary-light;
+      cursor:pointer;
+
+    }
+    &--header{
+      background-color:$color-primary;
+      color:$color-secondary-light;
+      font-style: italic;
+      justify-self: center;
+      &:hover{
+        background-color:$color-primary;
+        cursor:none;
+      }
+    }
+  }
+  
+  &__item{
+    border: 1px solid gray;
+    font-size: 2rem;
+    padding:0 .5rem;
+  }
+
+}
+
+.child-profile{
+  &__form{
+    width: max-content;
+  }
+
+  &__button{
+    width: max-content;
+  }
+}

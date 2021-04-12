@@ -1,4 +1,5 @@
-.section-login {
+.section-login,
+.section-reset-password {
   height: 90vh; 
   background-image: linear-gradient( 
       to bottom,
@@ -18,7 +19,8 @@
   }
 }
 
-.login {
+.login,
+.reset-password,{ 
 
   &__form {
     

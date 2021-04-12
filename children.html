@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1"
+    />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      rel="shortcut icon"
+      type="image/svg"
+      href="../img/JMJ-open-book.svg"
+    />
+    <title>JMJ Co-op</title>
+  </head>
+
+  <body>
+    <section class="children page__content">
+      <h1 class="family__title">The Smith Family</h1>
+      <div class="year-selector">
+        <select name="year-selector" id="yearSelector">
+          <option value="2021-2022">2021-2022</option>
+          <option value="2020-2021">2020-2021</option>
+          <option value="2019-2020">2019-2020</option>
+          <option value="2018-2019">2018-2019</option>
+        </select>
+      </div>
+
+      <div class="children">
+        <div class="children__row children__row--header">
+          <div class="children__item">First Name</div>
+          <div class="children__item">Sex</div>
+          <div class="children__item">Grade</div>
+        </div>
+        <div class="children__row">
+          <div class="children__item">Suzy</div>
+          <div class="children__item">F</div>
+          <div class="children__item">10th</div>
+        </div>
+        <div class="children__row">
+          <div class="children__item">Salamancer</div>
+          <div class="children__item">F</div>
+          <div class="children__item">8th</div>
+        </div>
+        <div class="children__row">
+          <div class="children__item">Suzy</div>
+          <div class="children__item">F</div>
+          <div class="children__item">10th</div>
+        </div>
+        <div class="children__row">
+          <div class="children__item">Suzy</div>
+          <div class="children__item">F</div>
+          <div class="children__item">10th</div>
+        </div>
+        <div class="children__row">
+          <div class="children__item">Suzy</div>
+          <div class="children__item">F</div>
+          <div class="children__item">10th</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="child-profile">
+      <div class="form form__outline-box child-profile__form">
+        <div class="form__row">
+          <div class="form__header-text">Child</div>
+          <div class="form__header-background family-form__header-image"></div>
+        </div>
+
+        <div class="form__outline-box--bottom form__row">
+          <div class="form__item">
+            <label for="firstName" class="form__label">First Name</label>
+            <input
+              type="text"
+              id="firstName"
+              name="firstName"
+              size="15"
+              value="Mary"
+              class="form__input"
+            />
+          </div>
+        </div>
+        <div class="form__outline-box--bottom">
+          <div class="form__row form__item form__label">Sex</div>
+          <div class="form__row form__item">
+            
+             
+              <div class="form__radio-group">
+                <div class="form__radio-item">
+                  <input type="radio" id="male" name="sex" value="M" />
+                  <label for="sex" class="form__label-radio">Male</label>
+                </div>
+                <div class="form__radio-item">
+                  <input type="radio" id="female" name="sex" value="F" />
+                  <label for="sex" class="form__label-radio">Female</label>
+            
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="form__row">
+            <div class="form__label form__item">Grade</div>
+          </div>
+          <div class="form__row">
+            <div class="form__radiocolumn form__item">
+              <div class="form__radio-item">
+                <input type="radio" id="Infant" name="grade" value="Infant" />
+                <label for="grade" class="form__label-radio">Infant</label>
+              </div>
+              <div class="form__radio-item">
+                <input type="radio" id="PreK3" name="grade" value="PreK3" />
+                <label for="grade" class="form__label-radio">PreK 3</label>
+              </div>
+              <div class="form__radio-item">
+                <input type="radio" id="PreK4" name="grade" value="PreK4" />
+                <label for="grade" class="form__label-radio">PreK 4</label>
+              </div>
+              <div class="form__radio-item">
+                <input type="radio" id="K" name="grade" value="K" />
+                <label for="grade" class="form__label-radio">K</label>
+              </div>
+            </div>
+
+            <div class="form__radio-column form__item">
+              <div class="form__radio-item">
+                <input type="radio" id="1st" name="grade" value="1st" />
+                <label for="grade" class="form__label-radio">1st</label>
+              </div>
+              <div class="form__radio-item">
+                <input type="radio" id="2nd" name="grade" value="2nd" />
+                <label for="grade" class="form__label-radio">2nd</label>
+              </div>
+              <div class="form__radio-item">
+                <input type="radio" id="3rd" name="grade" value="3rd" />
+                <label for="grade" class="form__label-radio">3rd</label>
+              </div>
+              <div class="form__radio-item">
+                <input type="radio" id="4th" name="grade" value="4th" />
+                <label for="grade" class="form__label-radio">4th</label>
+              </div>
+              <div class="form__radio-item">
+                <input type="radio" id="5th" name="grade" value="5th" />
+                <label for="grade" class="form__label-radio">5th</label>
+              </div>
+              <div class="form__radio-item">
+                <input type="radio" id="6th" name="grade" value="6th" />
+                <label for="grade" class="form__label-radio">6th</label>
+              </div>
+              <div class="form__radio-item">
+                <input type="radio" id="7th" name="grade" value="7th" />
+                <label for="grade" class="form__label-radio">7th</label>
+              </div>
+              <div class="form__radio-item">
+                <input type="radio" id="8th" name="grade" value="8th" />
+                <label for="grade" class="form__label-radio">8th</label>
+              </div>
+            </div>
+
+            <div class="form__radio-column form__item">
+              <div class="form__radio-item">
+                <input type="radio" id="9th" name="grade" value="9th" />
+                <label for="grade" class="form__label-radio">9th</label>
+              </div>
+              <div class="form__radio-item">
+                <input type="radio" id="10th" name="grade" value="10th" />
+                <label for="grade" class="form__label-radio">10th</label>
+              </div>
+              <div class="form__radio-item">
+                <input type="radio" id="11th" name="grade" value="11th" />
+                <label for="grade" class="form__label-radio">11th</label>
+              </div>
+              <div class="form__radio-item">
+                <input type="radio" id="12th" name="grade" value="12th" />
+                <label for="grade" class="form__label-radio">12th</label>
+              </div>
+              <div class="form__radio-item">
+                <input type="radio" id="Adult" name="grade" value="Adult" />
+                <label for="grade" class="form__label-radio">Adult</label>
+              </div>
+            </div>
+            
+          </div>
+          <div class="form__row">
+            
+            
+              <input type="submit" value-"Submit" class="form__button form__item--center child-profile__button">
+            
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

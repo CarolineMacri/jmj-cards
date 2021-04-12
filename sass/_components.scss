@@ -244,6 +244,14 @@
     font-size: 1.5rem;
     color: $color-secondary-dark;
   }
+
+  &__label-radio{
+    font-size: 1.5rem;
+    color: $color-primary-dark;
+    margin-left: .5rem;
+    margin-right: 1.5rem;
+
+  }
   &__input {
     font-size: 2rem;
     background-color: white;
@@ -263,6 +271,30 @@
       font-size: 1.5rem;
       color: $color-gray-light-1;
     }
+  }
+  &__radio-group{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+  }
+
+  &__radio-item{
+   display: flex;
+   align-items: center;
+  
+
+   &:hover{
+      cursor:pointer;
+    }
+   
+   
+  }
+
+
+
+  &__radio-input{
+    
   }
 }
 
