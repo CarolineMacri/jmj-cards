@@ -40,7 +40,9 @@ body {
   .page__nav {
     width: 20rem; }
   .page__content {
-    flex: 1; }
+    flex: 1;
+    display: flex;
+    flex-direction: column; }
 
 .card {
   background-color: white;
@@ -193,7 +195,7 @@ body {
     color: #ffd293;
     font-size: 1.5rem;
     padding: 1px 2rem;
-    flex: 1;
+    margin: auto;
     font: inherit;
     border: none;
     border-radius: 5px;

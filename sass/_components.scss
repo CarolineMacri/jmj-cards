@@ -225,7 +225,7 @@
     color: $color-secondary-light;
     font-size: 1.5rem;
     padding: 1px 2rem;
-    flex: 1;
+    margin:auto;
     font: inherit;
     border: none;
     border-radius: 5px;
@@ -236,8 +236,8 @@
     &:focus {
       outline: none;
       background-color: $color-primary;
-      cursor: pointer;
-    }
+      cursor: pointer; 
+    } 
   }
 
   &__label {
