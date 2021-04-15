@@ -30,12 +30,16 @@ body {
   font-family: "Jost", sans-serif;
   color: #666;
   font-weight: normal;
-  line-height: 1.6; }
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; }
 
 .container {
   margin: 0 auto; }
 
 .page {
+  flex: 1;
   display: flex; }
   .page__nav {
     width: 20rem; }
@@ -210,7 +214,7 @@ body {
   .form__label-radio {
     font-size: 1.5rem;
     color: #1c346e;
-    margin-left: .5rem;
+    margin-left: 0.5rem;
     margin-right: 1.5rem; }
   .form__input {
     font-size: 2rem;
@@ -253,12 +257,50 @@ option {
 .year-select {
   margin: auto; }
 
+.modal__window {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.1);
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.modal__content {
+  position: absolute;
+  flex: 1;
+  box-shadow: 5px 5px 5px 1px black; }
+
+.modal__close {
+  top: 0;
+  right: 0;
+  width: 1.5rem;
+  line-height: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  background-color: #cfd1e2; }
+  .modal__close:hover {
+    background-color: #2f4885; }
+
+.modal__show {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s; }
+
 .header {
   background-color: #1c346e;
   color: #ffd293;
   fill: #ffd293;
   font-style: italic;
   height: min-content;
+  width: 100%;
   padding-top: .8rem;
   display: flex;
   align-items: center; }

@@ -17,7 +17,7 @@ $color-gray-light-1: #aaa;
 $color-gray-light-2: #eee;
 
 $color-gray-dark-1: #888;
-$color-gray-dark-2: #666; 
+$color-gray-dark-2: #666;  
 
 $color-black: #000;
 $color-white: #fff;
@@ -64,13 +64,17 @@ body {
   color: $color-gray-dark-2;
   font-weight: normal;
   line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .container {
   margin: 0 auto;
-}
+} 
 
-.page{
+.page{ 
+  flex: 1;
   display: flex;
 
   &__nav{

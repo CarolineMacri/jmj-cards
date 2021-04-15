@@ -9,8 +9,8 @@
     display: grid;
     grid-template-columns: 20rem 7rem 7rem;
     &:hover{
-      background-color: $color-primary-light;
-      cursor:pointer;
+      background-color: $color-primary-light; 
+      cursor:pointer; 
 
     }
     &--header{
@@ -27,13 +27,14 @@
   
   &__item{
     border: 1px solid gray;
-    font-size: 2rem;
+    font-size: 2rem; 
     padding:0 .5rem;
   }
 
 }
 
 .child-profile{
+  
   &__form{
     width: max-content;
   }
