@@ -200,7 +200,6 @@ body {
     font-size: 1.5rem;
     padding: 1px 2rem;
     margin: auto;
-    font: inherit;
     border: none;
     border-radius: 5px;
     margin-bottom: 2rem; }
@@ -479,35 +478,27 @@ option {
   justify-content: center; }
 
 .children {
-  display: grid;
-  width: max-content;
-  grid-template-columns: auto;
   font-size: 2rem;
   margin: 5rem auto; }
-  .children__row {
-    display: grid;
-    grid-template-columns: 20rem 7rem 7rem; }
-    .children__row:hover {
-      background-color: #cfd1e2;
-      cursor: pointer; }
-    .children__row--header {
-      background-color: #2f4885;
-      color: #ffd293;
-      font-style: italic;
-      justify-self: center; }
-      .children__row--header:hover {
-        background-color: #2f4885;
-        cursor: none; }
-  .children__item {
+  .children th {
+    background-color: #2f4885;
+    color: #ffd293;
+    font-style: italic;
+    padding: 0 2rem; }
+  .children tr:hover {
+    background-color: #cfd1e2;
+    cursor: pointer; }
+  .children td {
     border: 1px solid gray;
     font-size: 2rem;
-    padding: 0 .5rem; }
+    padding: 0 0.5rem; }
 
 .child-profile__form {
   width: max-content; }
 
 .child-profile__button {
-  width: max-content; }
+  width: max-content;
+  margin: 2px; }
 
 .user-profile {
   width: 100%;

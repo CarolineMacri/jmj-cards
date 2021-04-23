@@ -1,29 +1,24 @@
-.side-nav{
-
-  background-color:$color-primary;
+.side-nav {
+  background-color: $color-primary;
   width: 20rem;
 
-
-
-
-  &__section{ 
+  &__section {
     display: flex;
     flex-direction: column;
     padding: 2rem;
-
   }
 
-  &__heading{
-    color: $color-secondary-light; 
+  &__heading {
+    color: $color-secondary-light;
     font-style: italic;
   }
 
-  &__item{
+  &__item {
     padding-left: 1rem;
     font-size: 1.5rem;
     color: white;
 
-    &:hover{
+    &:hover {
       border-left: 2px solid white;
     }
   }
