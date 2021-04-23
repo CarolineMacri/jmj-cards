@@ -23,8 +23,7 @@
   </head>
 
   <body>
-    <div class="page__content">
-
+    <th class="page__content">
       <section class="children page__content-row">
         <div class="page__content-row"></div>
         <h1 class="family__title">The Smith Family</h1>
@@ -36,49 +35,48 @@
             <option value="2018-2019">2018-2019</option>
           </select>
         </div>
-  
-        <div class="children">
-          <div class="children__row children__row--header">
-            <div class="children__item">First Name</div>
-            <div class="children__item">Sex</div>
-            <div class="children__item">Grade</div>
+
+        <table>
+          <tr>
+            <th>First Name</th>
+            <th>Sex</th>
+            <th>Grade</th>
+          </tr>
+         
+          <tr>
+            <td>Salamancer</div>
+            <td>F</div>
+            <td>8th</div>
           </div>
-          <div class="children__row">
-            <div class="children__item">Suzy</div>
-            <div class="children__item">F</div>
-            <div class="children__item">10th</div>
+          <tr>
+            <td>Suzy</div>
+            <td>F</div>
+            <td>10th</div>
           </div>
-          <div class="children__row">
-            <div class="children__item">Salamancer</div>
-            <div class="children__item">F</div>
-            <div class="children__item">8th</div>
+          <tr>
+            <td>Suzy</div>
+            <td>F</div>
+            <td>10th</div>
           </div>
-          <div class="children__row">
-            <div class="children__item">Suzy</div>
-            <div class="children__item">F</div>
-            <div class="children__item">10th</div>
+          <tr>
+            <td>Suzy</div>
+            <td>F</div>
+            <td>10th</div>
           </div>
-          <div class="children__row">
-            <div class="children__item">Suzy</div>
-            <div class="children__item">F</div>
-            <div class="children__item">10th</div>
-          </div>
-          <div class="children__row">
-            <div class="children__item">Suzy</div>
-            <div class="children__item">F</div>
-            <div class="children__item">10th</div>
-          </div>
-        </div>
+        </table>
       </section>
       <section class="child-profile page__content-row">
         <div class="modal__window">
-
-          <div class="form form__outline-box child-profile__form modal__content">
+          <div
+            class="form form__outline-box child-profile__form modal__content"
+          >
             <div class="form__row">
               <div class="form__header-text">Child</div>
-              <div class="form__header-background family-form__header-image"></div>
+              <div
+                class="form__header-background family-form__header-image"
+              ></div>
             </div>
-    
+
             <div class="form__outline-box--bottom form__row">
               <div class="form__item">
                 <label for="firstName" class="form__label">First Name</label>
@@ -95,17 +93,14 @@
             <div class="form__outline-box--bottom">
               <div class="form__row form__item form__label">Sex</div>
               <div class="form__row form__item">
-                
-                 
-                  <div class="form__radio-group">
-                    <div class="form__radio-item">
-                      <input type="radio" id="male" name="sex" value="M" />
-                      <label for="sex" class="form__label-radio">Male</label>
-                    </div>
-                    <div class="form__radio-item">
-                      <input type="radio" id="female" name="sex" value="F" />
-                      <label for="sex" class="form__label-radio">Female</label>
-                
+                <div class="form__radio-group">
+                  <div class="form__radio-item">
+                    <input type="radio" id="male" name="sex" value="M" />
+                    <label for="sex" class="form__label-radio">Male</label>
+                  </div>
+                  <div class="form__radio-item">
+                    <input type="radio" id="female" name="sex" value="F" />
+                    <label for="sex" class="form__label-radio">Female</label>
                   </div>
                 </div>
               </div>
@@ -117,7 +112,12 @@
               <div class="form__row">
                 <div class="form__radiocolumn form__item">
                   <div class="form__radio-item">
-                    <input type="radio" id="Infant" name="grade" value="Infant" />
+                    <input
+                      type="radio"
+                      id="Infant"
+                      name="grade"
+                      value="Infant"
+                    />
                     <label for="grade" class="form__label-radio">Infant</label>
                   </div>
                   <div class="form__radio-item">
@@ -133,7 +133,7 @@
                     <label for="grade" class="form__label-radio">K</label>
                   </div>
                 </div>
-    
+
                 <div class="form__radio-column form__item">
                   <div class="form__radio-item">
                     <input type="radio" id="1st" name="grade" value="1st" />
@@ -168,7 +168,7 @@
                     <label for="grade" class="form__label-radio">8th</label>
                   </div>
                 </div>
-    
+
                 <div class="form__radio-column form__item">
                   <div class="form__radio-item">
                     <input type="radio" id="9th" name="grade" value="9th" />
@@ -191,19 +191,15 @@
                     <label for="grade" class="form__label-radio">Adult</label>
                   </div>
                 </div>
-                
               </div>
               <div class="form__row">
-                
-                
-                  <input type="submit" value-"Submit" class="form__button form__item--center child-profile__button">
-                
+                <input type="submit" value-"Submit" class="form__button
+                form__item--center child-profile__button">
               </div>
             </div>
           </div>
         </div>
-      </section> 
+      </section>
     </div>
-
   </body>
 </html>
