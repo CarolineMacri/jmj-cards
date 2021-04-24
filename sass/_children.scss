@@ -1,7 +1,10 @@
 .children {
-
   font-size: 2rem;
   margin: 5rem auto;
+
+  table {
+    margin: 3rem;
+  }
 
   th {
     background-color: $color-primary;
@@ -19,9 +22,35 @@
   }
 
   td {
+    background-color: white;
     border: 1px solid gray;
     font-size: 2rem;
     padding: 0 0.5rem;
+
+  }
+  .button{
+    
+  }
+  .edit {
+    color: $color-primary;
+    padding: .2rem .5rem;
+    
+    &:hover{
+      transform: scale(1.5);
+      color: green;
+    }
+  }
+  .delete {
+    padding: 0 .4rem;
+    color:$color-tertiary;
+    
+    &:hover{
+      transform: scale(1.5);
+      color: red;
+    }
+  }
+  .new{
+    text-align: center;
   }
 }
 
@@ -29,9 +58,5 @@
   &__form {
     width: max-content;
   }
-
-  &__button {
-    width: max-content;
-    margin: 2px;
-  }
+ 
 }

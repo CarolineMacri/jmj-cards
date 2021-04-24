@@ -23,17 +23,18 @@
   </head>
 
   <body>
-    <th class="page__content">
+    <div class="page__content">
       <section class="children page__content-row">
-        <div class="page__content-row"></div>
-        <h1 class="family__title">The Smith Family</h1>
-        <div class="year-selector">
-          <select name="year-selector" id="yearSelector">
-            <option value="2021-2022">2021-2022</option>
-            <option value="2020-2021">2020-2021</option>
-            <option value="2019-2020">2019-2020</option>
-            <option value="2018-2019">2018-2019</option>
-          </select>
+        <div class="page__content-row">
+          <h1 class="family__title">The Smith Family</h1>
+          <div class="year-selector">
+            <select name="year-selector" id="yearSelector">
+              <option value="2021-2022">2021-2022</option>
+              <option value="2020-2021">2020-2021</option>
+              <option value="2019-2020">2019-2020</option>
+              <option value="2018-2019">2018-2019</option>
+            </select>
+          </div>
         </div>
 
         <table>
@@ -42,27 +43,43 @@
             <th>Sex</th>
             <th>Grade</th>
           </tr>
-         
           <tr>
-            <td>Salamancer</div>
-            <td>F</div>
-            <td>8th</div>
-          </div>
+            <td>Suzy</td>
+            <td>F</td>
+            <td>10th</td>
+            <td class='button'>
+              <div class="edit">&#9998</div>
+            </td>
+            <td class='button'>
+              <div class="delete">&#10006</div>
+            </td>
+          </tr>
           <tr>
-            <td>Suzy</div>
-            <td>F</div>
-            <td>10th</div>
-          </div>
+            <td>Suzy</td>
+            <td>F</td>
+            <td>10th</td>
+            <td class='button'>
+              <div class="edit">&#9998</div>
+            </td>
+            <td class='button'>
+              <div class="delete">&#10006</div>
+            </td>
+          </tr>
           <tr>
-            <td>Suzy</div>
-            <td>F</div>
-            <td>10th</div>
-          </div>
+            <td>Suzy</td>
+            <td>F</td>
+            <td>10th</td>
+            <td class='button'>
+              <div class="edit">&#9998</div>
+            </td>
+            <td class='button'>
+              <div class="delete">&#10006</div>
+            </td>
+          </tr>
           <tr>
-            <td>Suzy</div>
-            <td>F</div>
-            <td>10th</div>
-          </div>
+            <td class='new'>+</td>
+            
+          </tr>
         </table>
       </section>
       <section class="child-profile page__content-row">
@@ -194,7 +211,8 @@
               </div>
               <div class="form__row">
                 <input type="submit" value-"Submit" class="form__button
-                form__item--center child-profile__button">
+                form__item--center">
+                <button id='cancel' class="form__button form__cancel">X</button>
               </div>
             </div>
           </div>

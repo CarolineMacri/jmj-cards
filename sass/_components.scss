@@ -224,8 +224,8 @@
     background-color: $color-primary-dark;
     color: $color-secondary-light;
     font-size: 1.5rem;
-    padding: 1px 2rem;
-    margin: auto;
+    padding: .5rem 2rem;
+    margin: .5rem auto;
 
     border: none;
     border-radius: 5px;
@@ -235,15 +235,21 @@
     &:active,
     &:focus {
       outline: none;
-      background-color: $color-primary;
+      background-color: green;
       cursor: pointer;
     }
+  }
+  &__cancel{
+     border-radius: 50%;
+     &:hover{
+       background-color:red;
+     }
   }
 
   &__label {
     font-size: 1.5rem;
     color: $color-secondary-dark;
-  }
+  } 
 
   &__label-radio {
     font-size: 1.5rem;
