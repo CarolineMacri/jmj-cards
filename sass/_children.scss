@@ -15,21 +15,22 @@
   }
 
   tr {
+    background-color: white;
     &:hover {
       background-color: $color-primary-light;
-      cursor: pointer;
+
     }
   }
 
   td {
-    background-color: white;
+    background-color:inherit;
     border: 1px solid gray;
     font-size: 2rem;
     padding: 0 0.5rem;
 
   }
   .button{
-    
+    background-color: white;
   }
   .edit {
     color: $color-primary;
@@ -51,6 +52,10 @@
   }
   .new{
     text-align: center;
+    &:hover{
+      transform: scale(1.5);
+      color: $color-tertiary;
+    }
   }
 }
 
