@@ -18,41 +18,39 @@
     background-color: white;
     &:hover {
       background-color: $color-primary-light;
-
     }
   }
 
   td {
-    background-color:inherit;
+    background-color: inherit;
     border: 1px solid gray;
     font-size: 2rem;
     padding: 0 0.5rem;
-
   }
-  .button{
+  .button {
     background-color: white;
   }
   .edit {
     color: $color-primary;
-    padding: .2rem .5rem;
-    
-    &:hover{
+    padding: 0.2rem 0.5rem;
+
+    &:hover {
       transform: scale(1.5);
       color: green;
     }
   }
   .delete {
-    padding: 0 .4rem;
-    color:$color-tertiary;
-    
-    &:hover{
+    padding: 0 0.4rem;
+    color: $color-tertiary;
+
+    &:hover {
       transform: scale(1.5);
       color: red;
     }
   }
-  .new{
+  .new {
     text-align: center;
-    &:hover{
+    &:hover {
       transform: scale(1.5);
       color: $color-tertiary;
     }
@@ -63,5 +61,20 @@
   &__form {
     width: max-content;
   }
- 
+}
+
+.child-delete{
+  &__modal{
+    background-color: white;
+    padding: 1rem 2rem 0rem;
+    border-radius: 2px;
+    text-align: center;
+  }
+  
+  &__warning{
+    color:red;
+    font-size: 3rem;
+    font-weight: bolder;
+  }
+  
 }

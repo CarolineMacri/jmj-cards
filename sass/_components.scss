@@ -222,10 +222,10 @@
 
   &__button {
     background-color: $color-primary-dark;
-    color: $color-secondary-light;
+    color: white;
     font-size: 1.5rem;
-    padding: .5rem 2rem;
-    margin: .5rem auto;
+    padding: 0.5rem 2rem;
+    margin: 0.5rem auto;
 
     border: none;
     border-radius: 5px;
@@ -235,21 +235,28 @@
     &:active,
     &:focus {
       outline: none;
-      background-color: green;
+      background-color:$color-primary-light;
       cursor: pointer;
     }
   }
-  &__cancel{
-     border-radius: 50%;
-     &:hover{
-       background-color:red;
-     }
+  &__cancel {
+    background-color: inherit;
+    color:black;
+    border: 1px solid black;
+    border-radius: 5px;
+
+    &:hover,
+    &:active {
+      background-color: inherit;
+      color:$color-primary-light;
+      border-color: $color-primary-light;
+    }
   }
 
   &__label {
     font-size: 1.5rem;
     color: $color-secondary-dark;
-  } 
+  }
 
   &__label-radio {
     font-size: 1.5rem;
@@ -314,7 +321,8 @@ option {
   margin: auto;
 }
 
-.modal {
+.form-modal,
+.delete-modal {
   &__window {
     position: fixed;
     top: 0;
@@ -354,5 +362,45 @@ option {
     visibility: visible;
     transform: scale(1);
     transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+  }
+}
+
+.button {
+  background-color: $color-primary;
+  color: white;
+  //width: 8rem;
+  font-size: 1.5rem;
+  padding: 0.5rem 2rem;
+  margin: 1rem;
+
+  border: .5px solid $color-primary;
+  border-radius: 5px;
+  margin-bottom: 2rem;
+
+  &:hover,
+  &:active {
+    border-color: $color-primary-light;
+    outline: none;
+    background-color: $color-primary-light;
+    cursor: pointer;
+  }
+}
+
+.button-cancel {
+  background-color: inherit;
+  color: black;
+  width: 8rem;
+  border: 0.5px solid black;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  padding: 0.5rem 2rem;
+  margin: 1rem;
+
+  &:hover,
+  &:active {
+    border: 0.5px solid $color-primary-light;
+    color: $color-primary-light;
+
+    cursor: pointer;
   }
 }

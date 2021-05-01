@@ -77,15 +77,17 @@
             </td>
           </tr>
           <tr>
-            <td class='new'>+</td>
+            <td class='button'>
+              <div class="new">&#10010</div>
+            </td>
             
           </tr>
         </table>
       </section>
       <section class="child-profile page__content-row">
-        <div class="modal__window">
+        <div class="form-modal__window">
           <div
-            class="form form__outline-box child-profile__form modal__content"
+            class="form form__outline-box child-profile__form form-modal__content"
           >
             <div class="form__row">
               <div class="form__header-text">Child</div>
@@ -121,7 +123,7 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> 
             <div>
               <div class="form__row">
                 <div class="form__label form__item">Grade</div>
@@ -208,6 +210,7 @@
                     <label for="grade" class="form__label-radio">Adult</label>
                   </div>
                 </div>
+                
               </div>
               <div class="form__row">
                 <input type="submit" value-"Submit" class="form__button
@@ -215,6 +218,17 @@
                 <button id='cancel' class="form__button form__cancel">X</button>
               </div>
             </div>
+          </div>
+        
+      </section>
+      <section class="child-delete page__content-row">
+        <div class="delete-modal__window">
+          <div class="delete-modal__content child-delete__modal">
+            <p class="child-delete__warning">&#9888</p>
+              <p>Are you sure you want to delete this page</p>
+                      <button class="button">OK</button>
+                      <button class="button-cancel">cancel</button>
+
           </div>
         </div>
       </section>
