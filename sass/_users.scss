@@ -1,0 +1,84 @@
+.users {
+  font-size: 2rem;
+  margin: 5rem auto;
+
+  &__title{
+    text-align: center;
+  }
+
+  table {
+    margin: 3rem;
+  }
+
+  th {
+    background-color: $color-primary;
+    color: $color-secondary-light;
+    font-style: italic;
+    padding: 0 2rem;
+    //justify-self: center;
+  }
+
+  tr {
+    background-color: white;
+    &:hover {
+      background-color: $color-primary-light;
+    }
+  }
+
+  td {
+    background-color: inherit;
+    border: 1px solid gray;
+    font-size: 2rem;
+    padding: 0 0.5rem;
+  }
+  .button {
+    background-color: white;
+  }
+  .edit {
+    color: $color-primary;
+    padding: 0.2rem 0.5rem;
+
+    &:hover {
+      transform: scale(1.5);
+      color: green;
+    }
+  }
+  .delete {
+    padding: 0 0.4rem;
+    color: $color-tertiary;
+
+    &:hover {
+      transform: scale(1.5);
+      color: red;
+    }
+  }
+  .new {
+    text-align: center;
+    &:hover {
+      transform: scale(1.5);
+      color: $color-tertiary;
+    }
+  }
+}
+
+.user-profile {
+  &__form {
+    width: max-content;
+  }
+}
+
+.user-delete{
+  &__modal{
+    background-color: white;
+    padding: 1rem 2rem 0rem;
+    border-radius: 2px;
+    text-align: center;
+  }
+  
+  &__warning{
+    color:red;
+    font-size: 3rem;
+    font-weight: bolder;
+  }
+  
+}
