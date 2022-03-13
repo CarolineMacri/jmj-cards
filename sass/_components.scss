@@ -50,11 +50,17 @@
     &--small {
       min-width: 20rem;
     }
+
     &--medium {
       min-width: 30rem;
     }
+    
     &--large {
       min-width: 40rem;
+    }
+
+    &--extra-large {
+      min-width: 50rem;
     }
   }
 
@@ -235,20 +241,20 @@
     &:active,
     &:focus {
       outline: none;
-      background-color:$color-primary-light;
+      background-color: $color-primary-light;
       cursor: pointer;
     }
   }
   &__cancel {
     background-color: inherit;
-    color:black;
+    color: black;
     border: 1px solid black;
     border-radius: 5px;
 
     &:hover,
     &:active {
       background-color: inherit;
-      color:$color-primary-light;
+      color: $color-primary-light;
       border-color: $color-primary-light;
     }
   }
@@ -373,7 +379,7 @@ option {
   padding: 0.5rem 2rem;
   margin: 1rem;
 
-  border: .5px solid $color-primary;
+  border: 0.5px solid $color-primary;
   border-radius: 5px;
   margin-bottom: 2rem;
 

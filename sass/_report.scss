@@ -1,0 +1,32 @@
+.report {
+  padding: 2rem 5rem;
+  display: flex;
+  justify-content: left;
+  flex-wrap: wrap;
+  gap: 7rem;
+
+  &__title{
+    text-align: center;
+  }
+
+  &__column{
+    text-align: left;
+  }
+
+  .course_card{
+    &__grades, &__semesters{
+      display: flex;
+      justify-content: left;
+    }
+    &__header-text{
+      max-width: 40rem;
+      white-space: normal;
+    }
+  }
+
+}
+
+.year-selector {
+  display: flex;
+  justify-content: center;
+}

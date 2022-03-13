@@ -1,8 +1,9 @@
-.users {
+.users,
+.registrations {
   font-size: 2rem;
   margin: 5rem auto;
 
-  &__title{
+  &__title {
     text-align: center;
   }
 
@@ -61,24 +62,26 @@
   }
 }
 
-.user-profile {
-  &__form {
-    width: max-content;
+.user {
+  &-profile {
+    &__form {
+      width: max-content;
+    }
+  }
+  
+  &-delete {
+    &__modal {
+      background-color: white;
+      padding: 1rem 2rem 0rem;
+      border-radius: 2px;
+      text-align: center;
+    }
+  
+    &__warning {
+      color: red;
+      font-size: 3rem;
+      font-weight: bolder;
+    }
   }
 }
 
-.user-delete{
-  &__modal{
-    background-color: white;
-    padding: 1rem 2rem 0rem;
-    border-radius: 2px;
-    text-align: center;
-  }
-  
-  &__warning{
-    color:red;
-    font-size: 3rem;
-    font-weight: bolder;
-  }
-  
-}

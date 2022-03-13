@@ -38,12 +38,17 @@ body {
 .container {
   margin: 0 auto; }
 
+main {
+  flex: 1;
+  display: flex; }
+
 .page {
   flex: 1;
   display: flex; }
   .page__nav {
     width: 20rem; }
   .page__content {
+    padding: 5rem;
     flex: 1;
     display: flex;
     flex-direction: column; }
@@ -84,6 +89,8 @@ body {
       min-width: 30rem; }
     .card__column--large {
       min-width: 40rem; }
+    .card__column--extra-large {
+      min-width: 50rem; }
   .card__item {
     padding: 0 1rem; }
     .card__item--center {
@@ -196,17 +203,26 @@ body {
       text-align: right; }
   .form__button {
     background-color: #1c346e;
-    color: #ffd293;
+    color: white;
     font-size: 1.5rem;
-    padding: 1px 2rem;
-    margin: auto;
+    padding: 0.5rem 2rem;
+    margin: 0.5rem auto;
     border: none;
     border-radius: 5px;
     margin-bottom: 2rem; }
     .form__button:hover, .form__button:active, .form__button:focus {
       outline: none;
-      background-color: #2f4885;
+      background-color: #cfd1e2;
       cursor: pointer; }
+  .form__cancel {
+    background-color: inherit;
+    color: black;
+    border: 1px solid black;
+    border-radius: 5px; }
+    .form__cancel:hover, .form__cancel:active {
+      background-color: inherit;
+      color: #cfd1e2;
+      border-color: #cfd1e2; }
   .form__label {
     font-size: 1.5rem;
     color: #7c4a03; }
@@ -256,7 +272,8 @@ option {
 .year-select {
   margin: auto; }
 
-.modal__window {
+.form-modal__window,
+.delete-modal__window {
   position: fixed;
   top: 0;
   left: 0;
@@ -270,12 +287,14 @@ option {
   justify-content: center;
   align-items: center; }
 
-.modal__content {
+.form-modal__content,
+.delete-modal__content {
   position: absolute;
   flex: 1;
   box-shadow: 5px 5px 5px 1px black; }
 
-.modal__close {
+.form-modal__close,
+.delete-modal__close {
   top: 0;
   right: 0;
   width: 1.5rem;
@@ -284,14 +303,45 @@ option {
   cursor: pointer;
   border-radius: 0.25rem;
   background-color: #cfd1e2; }
-  .modal__close:hover {
+  .form-modal__close:hover,
+  .delete-modal__close:hover {
     background-color: #2f4885; }
 
-.modal__show {
+.form-modal__show,
+.delete-modal__show {
   opacity: 1;
   visibility: visible;
   transform: scale(1);
   transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s; }
+
+.button {
+  background-color: #2f4885;
+  color: white;
+  font-size: 1.5rem;
+  padding: 0.5rem 2rem;
+  margin: 1rem;
+  border: 0.5px solid #2f4885;
+  border-radius: 5px;
+  margin-bottom: 2rem; }
+  .button:hover, .button:active {
+    border-color: #cfd1e2;
+    outline: none;
+    background-color: #cfd1e2;
+    cursor: pointer; }
+
+.button-cancel {
+  background-color: inherit;
+  color: black;
+  width: 8rem;
+  border: 0.5px solid black;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  padding: 0.5rem 2rem;
+  margin: 1rem; }
+  .button-cancel:hover, .button-cancel:active {
+    border: 0.5px solid #cfd1e2;
+    color: #cfd1e2;
+    cursor: pointer; }
 
 .header {
   background-color: #1c346e;
@@ -480,29 +530,191 @@ option {
 .children {
   font-size: 2rem;
   margin: 5rem auto; }
+  .children table {
+    margin: 3rem; }
   .children th {
     background-color: #2f4885;
     color: #ffd293;
     font-style: italic;
     padding: 0 2rem; }
-  .children tr:hover {
-    background-color: #cfd1e2;
-    cursor: pointer; }
+  .children tr {
+    background-color: white; }
+    .children tr:hover {
+      background-color: #cfd1e2; }
   .children td {
+    background-color: inherit;
     border: 1px solid gray;
     font-size: 2rem;
     padding: 0 0.5rem; }
+  .children .button {
+    background-color: white; }
+  .children .edit {
+    color: #2f4885;
+    padding: 0.2rem 0.5rem; }
+    .children .edit:hover {
+      transform: scale(1.5);
+      color: green; }
+  .children .delete {
+    padding: 0 0.4rem;
+    color: #c7a337; }
+    .children .delete:hover {
+      transform: scale(1.5);
+      color: red; }
+  .children .new {
+    text-align: center; }
+    .children .new:hover {
+      transform: scale(1.5);
+      color: #c7a337; }
 
-.child-profile__form {
+.child-profile__form, .junk-profile__form {
   width: max-content; }
 
-.child-profile__button {
-  width: max-content;
-  margin: 2px; }
+.child-delete__modal, .junk-delete__modal {
+  background-color: white;
+  padding: 1rem 2rem 0rem;
+  border-radius: 2px;
+  text-align: center; }
+
+.child-delete__warning, .junk-delete__warning {
+  color: red;
+  font-size: 3rem;
+  font-weight: bolder; }
+
+.courses {
+  padding: 2rem 5rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 7rem; }
+  .courses__title {
+    text-align: center; }
+  .courses .course_card__grades, .courses .course_card__semesters {
+    display: flex;
+    justify-content: left; }
+  .courses .course_card__header-text {
+    max-width: 40rem;
+    white-space: normal; }
+
+.year-selector {
+  display: flex;
+  justify-content: center; }
+
+.report {
+  padding: 2rem 5rem;
+  display: flex;
+  justify-content: left;
+  flex-wrap: wrap;
+  gap: 7rem; }
+  .report__title {
+    text-align: center; }
+  .report__column {
+    text-align: left; }
+  .report .course_card__grades, .report .course_card__semesters {
+    display: flex;
+    justify-content: left; }
+  .report .course_card__header-text {
+    max-width: 40rem;
+    white-space: normal; }
+
+.year-selector {
+  display: flex;
+  justify-content: center; }
+
+.teachers {
+  margin: 5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(40rem, min-content));
+  gap: 7rem;
+  justify-items: center; }
+
+.teacher-card {
+  width: 100%;
+  flex-direction: column; }
+  .teacher-card__bio {
+    max-width: 100%; }
+  .teacher-card__courses {
+    background-color: rgba(255, 210, 147, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    padding: 0 2rem; }
+  .teacher-card__header-image {
+    background-image: linear-gradient(to bottom, rgba(255, 210, 147, 0.2), rgba(255, 210, 147, 0.3)), url("/img/OLOC.jpg");
+    background-size: cover; }
 
 .user-profile {
   width: 100%;
   margin: 5rem 0; }
+
+.users,
+.registrations {
+  font-size: 2rem;
+  margin: 5rem auto; }
+  .users__title,
+  .registrations__title {
+    text-align: center; }
+  .users table,
+  .registrations table {
+    margin: 3rem; }
+  .users th,
+  .registrations th {
+    background-color: #2f4885;
+    color: #ffd293;
+    font-style: italic;
+    padding: 0 2rem; }
+  .users tr,
+  .registrations tr {
+    background-color: white; }
+    .users tr:hover,
+    .registrations tr:hover {
+      background-color: #cfd1e2; }
+  .users td,
+  .registrations td {
+    background-color: inherit;
+    border: 1px solid gray;
+    font-size: 2rem;
+    padding: 0 0.5rem; }
+  .users .button,
+  .registrations .button {
+    background-color: white; }
+  .users .edit,
+  .registrations .edit {
+    color: #2f4885;
+    padding: 0.2rem 0.5rem; }
+    .users .edit:hover,
+    .registrations .edit:hover {
+      transform: scale(1.5);
+      color: green; }
+  .users .delete,
+  .registrations .delete {
+    padding: 0 0.4rem;
+    color: #c7a337; }
+    .users .delete:hover,
+    .registrations .delete:hover {
+      transform: scale(1.5);
+      color: red; }
+  .users .new,
+  .registrations .new {
+    text-align: center; }
+    .users .new:hover,
+    .registrations .new:hover {
+      transform: scale(1.5);
+      color: #c7a337; }
+
+.user-profile__form {
+  width: max-content; }
+
+.user-delete__modal {
+  background-color: white;
+  padding: 1rem 2rem 0rem;
+  border-radius: 2px;
+  text-align: center; }
+
+.user-delete__warning {
+  color: red;
+  font-size: 3rem;
+  font-weight: bolder; }
 
 .update-password {
   width: 100%;

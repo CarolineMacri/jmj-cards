@@ -57,24 +57,25 @@
   }
 }
 
-.child-profile {
-  &__form {
-    width: max-content;
+.child,.junk{
+  &-profile {
+    &__form {
+      width: max-content; 
+    }
+  }
+  &-delete {
+    &__modal {
+      background-color: white;
+      padding: 1rem 2rem 0rem;
+      border-radius: 2px;
+      text-align: center;
+    }
+  
+    &__warning {
+      color: red;
+      font-size: 3rem;
+      font-weight: bolder;
+    }
   }
 }
 
-.child-delete{
-  &__modal{
-    background-color: white;
-    padding: 1rem 2rem 0rem;
-    border-radius: 2px;
-    text-align: center;
-  }
-  
-  &__warning{
-    color:red;
-    font-size: 3rem;
-    font-weight: bolder;
-  }
-  
-}
