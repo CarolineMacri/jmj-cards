@@ -9,6 +9,14 @@
   justify-items: center;
 }
 
+.teacher-biography{
+  display:grid;
+  justify-content: center;
+
+  &__textarea{
+    flex: 50%
+  }
+}
 .teacher-card {
   width: 100%;
   flex-direction: column;

@@ -38,6 +38,10 @@ body {
 .container {
   margin: 0 auto; }
 
+textarea {
+  font-family: inherit;
+  font-size: medium !important; }
+
 main {
   flex: 1;
   display: flex; }
@@ -238,6 +242,8 @@ main {
     padding: 0 1rem;
     border: 1px solid #c78b37;
     display: block; }
+    .form__input--inline {
+      display: inline; }
     .form__input:focus {
       outline: none;
       border-bottom: 3px solid green; }
@@ -246,9 +252,10 @@ main {
     .form__input::placeholder {
       font-size: 1.5rem;
       color: #aaa; }
-  .form__radio-group {
+  .form__radio-group, .form__dropdown-group {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
     width: 100%;
     justify-content: center; }
   .form__radio-item {
@@ -282,7 +289,7 @@ option {
   background-color: rgba(0, 0, 0, 0.5);
   opacity: 0;
   visibility: hidden;
-  transform: scale(1.1);
+  transform: scale(0.7);
   display: flex;
   justify-content: center;
   align-items: center; }
@@ -527,55 +534,118 @@ option {
   display: flex;
   justify-content: center; }
 
-.children {
+.children table {
   font-size: 2rem;
   margin: 5rem auto; }
-  .children table {
-    margin: 3rem; }
-  .children th {
-    background-color: #2f4885;
-    color: #ffd293;
-    font-style: italic;
-    padding: 0 2rem; }
-  .children tr {
-    background-color: white; }
-    .children tr:hover {
-      background-color: #cfd1e2; }
-  .children td {
-    background-color: inherit;
-    border: 1px solid gray;
-    font-size: 2rem;
-    padding: 0 0.5rem; }
-  .children .button {
-    background-color: white; }
-  .children .edit {
-    color: #2f4885;
-    padding: 0.2rem 0.5rem; }
-    .children .edit:hover {
-      transform: scale(1.5);
-      color: green; }
-  .children .delete {
-    padding: 0 0.4rem;
-    color: #c7a337; }
-    .children .delete:hover {
-      transform: scale(1.5);
-      color: red; }
-  .children .new {
-    text-align: center; }
-    .children .new:hover {
-      transform: scale(1.5);
-      color: #c7a337; }
 
-.child-profile__form, .junk-profile__form {
+.children th {
+  background-color: #2f4885;
+  color: #ffd293;
+  font-style: italic;
+  padding: 0 2rem; }
+
+.children tr {
+  background-color: white; }
+  .children tr:hover {
+    background-color: #cfd1e2; }
+
+.children td {
+  background-color: inherit;
+  border: 1px solid gray;
+  font-size: 2rem;
+  padding: 0 0.5rem; }
+
+.children .button {
+  background-color: white; }
+
+.children .edit {
+  color: #2f4885;
+  padding: 0.2rem 0.5rem; }
+  .children .edit:hover {
+    transform: scale(1.5);
+    color: green; }
+
+.children .delete {
+  padding: 0 0.4rem;
+  color: #c7a337; }
+  .children .delete:hover {
+    transform: scale(1.5);
+    color: red; }
+
+.children .new {
+  text-align: center; }
+  .children .new:hover {
+    transform: scale(1.5);
+    color: #c7a337; }
+
+.child-profile__form {
   width: max-content; }
 
-.child-delete__modal, .junk-delete__modal {
+.child-delete__modal {
   background-color: white;
   padding: 1rem 2rem 0rem;
   border-radius: 2px;
   text-align: center; }
 
-.child-delete__warning, .junk-delete__warning {
+.child-delete__warning {
+  color: red;
+  font-size: 3rem;
+  font-weight: bolder; }
+
+.courses table {
+  font-size: 2rem;
+  margin: 5rem auto; }
+
+.courses th {
+  background-color: #2f4885;
+  color: #ffd293;
+  font-style: italic;
+  padding: 0 2rem; }
+
+.courses tr {
+  background-color: white; }
+  .courses tr:hover {
+    background-color: #cfd1e2; }
+
+.courses td {
+  background-color: inherit;
+  border: 1px solid gray;
+  font-size: 2rem;
+  padding: 0 0.5rem; }
+
+.courses .button {
+  background-color: white; }
+
+.courses .edit {
+  color: #2f4885;
+  padding: 0.2rem 0.5rem; }
+  .courses .edit:hover {
+    transform: scale(1.5);
+    color: green; }
+
+.courses .delete {
+  padding: 0 0.4rem;
+  color: #c7a337; }
+  .courses .delete:hover {
+    transform: scale(1.5);
+    color: red; }
+
+.courses .new {
+  text-align: center; }
+  .courses .new:hover {
+    transform: scale(1.5);
+    color: #c7a337; }
+
+.course-profile__form {
+  width: max-content; }
+
+.course-delete__modal {
+  background-color: white;
+  padding: 1rem 2rem 0rem;
+  border-radius: 2px;
+  text-align: center; }
+
+.course-delete__warning {
   color: red;
   font-size: 3rem;
   font-weight: bolder; }
@@ -620,12 +690,76 @@ option {
   display: flex;
   justify-content: center; }
 
+.teachers table {
+  font-size: 2rem;
+  margin: 5rem auto; }
+
+.teachers th {
+  background-color: #2f4885;
+  color: #ffd293;
+  font-style: italic;
+  padding: 0 2rem; }
+
+.teachers tr {
+  background-color: white; }
+  .teachers tr:hover {
+    background-color: #cfd1e2; }
+
+.teachers td {
+  background-color: inherit;
+  border: 1px solid gray;
+  font-size: 2rem;
+  padding: 0 0.5rem; }
+
+.teachers .button {
+  background-color: white; }
+
+.teachers .edit {
+  color: #2f4885;
+  padding: 0.2rem 0.5rem; }
+  .teachers .edit:hover {
+    transform: scale(1.5);
+    color: green; }
+
+.teachers .delete {
+  padding: 0 0.4rem;
+  color: #c7a337; }
+  .teachers .delete:hover {
+    transform: scale(1.5);
+    color: red; }
+
+.teachers .new {
+  text-align: center; }
+  .teachers .new:hover {
+    transform: scale(1.5);
+    color: #c7a337; }
+
+.teacher-profile__form {
+  width: max-content; }
+
+.teacher-delete__modal {
+  background-color: white;
+  padding: 1rem 2rem 0rem;
+  border-radius: 2px;
+  text-align: center; }
+
+.teacher-delete__warning {
+  color: red;
+  font-size: 3rem;
+  font-weight: bolder; }
+
 .teachers {
   margin: 5rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(40rem, min-content));
   gap: 7rem;
   justify-items: center; }
+
+.teacher-biography {
+  display: grid;
+  justify-content: center; }
+  .teacher-biography__textarea {
+    flex: 50%; }
 
 .teacher-card {
   width: 100%;
