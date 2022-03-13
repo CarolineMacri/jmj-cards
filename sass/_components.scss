@@ -277,6 +277,10 @@
     padding: 0 1rem;
     border: 1px solid $color-secondary;
     display: block;
+     
+    &--inline{
+      display: inline;
+    }
 
     &:focus {
       outline: none;
@@ -290,9 +294,10 @@
       color: $color-gray-light-1;
     }
   }
-  &__radio-group {
+  &__radio-group, &__dropdown-group {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
     width: 100%;
     justify-content: center;
   }
@@ -338,7 +343,7 @@ option {
     background-color: rgba(0, 0, 0, 0.5);
     opacity: 0;
     visibility: hidden;
-    transform: scale(1.1);
+    transform: scale(.7);
     display: flex;
     justify-content: center;
     align-items: center;

@@ -73,6 +73,11 @@ body {
   margin: 0 auto;
 } 
 
+textarea{
+  font-family:inherit;
+  font-size: small;
+}
+
 main{
   flex: 1;
   display: flex;
@@ -96,4 +101,6 @@ main{
   &__content-row{
     
   }
+
+ 
 }

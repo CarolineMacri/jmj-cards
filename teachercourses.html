@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1"
+    />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      rel="shortcut icon"
+      type="image/svg"
+      href="../img/JMJ-open-book.svg"
+    />
+    <title>JMJ Co-op</title>
+  </head>
+
+  <body>
+    <div class="page__content">
+      <section class="courses page__content">
+        <div class="page__content-row">
+          <h1 class="family__title">Mary Goodteacher</h1>
+          <div class="year-selector">
+            <select name="year-selector" id="yearSelector">
+              <option value="2021-2022">2021-2022</option>
+              <option value="2020-2021">2020-2021</option>
+              <option value="2019-2020">2019-2020</option>
+              <option value="2018-2019">2018-2019</option>
+            </select>
+          </div>
+        </div>
+
+        <table>
+          <tr>
+            <th>Course</th>
+            <th>Grades</th>
+            <th>Fee</th>
+          
+          </tr>
+          <tr>
+            <td>Reading</td>
+            <td>1st - 3rd</td>
+            <td>$5.00</td>
+            <td class='button'>
+              <div class="edit">&#9998</div>
+            </td>
+            <td class='button'>
+              <div class="delete">&#10006</div>
+            </td>
+          </tr>
+          <tr>
+            <td>Writing</td>
+            <td>4th - 8th</td>
+            <td>$5.00</td>
+            <td class='button'>
+              <div class="edit">&#9998</div>
+            </td>
+            <td class='button'>
+              <div class="delete">&#10006</div>
+            </td>
+          </tr>
+          <tr>
+            <td>Arithmetic</td>
+            <td>9th - 12th</td>
+            <td>$7.50</td>
+            <td class='button'>
+              <div class="edit">&#9998</div>
+            </td>
+            <td class='button'>
+              <div class="delete">&#10006</div>
+            </td>
+          </tr>
+          <tr>
+            <td class='button'>
+              <div class="new">&#10010</div>
+            </td>
+            
+          </tr>
+        </table>
+      </section>
+
+      <section class="course-profile page__content-row">
+        <div class="form-modal__window">
+          <div class="form form__outline-box course-profile__form form-modal__content" >
+            <div class="form__row">
+              <div class="form__header-text">Course</div>
+              <div
+                class="form__header-background family-form__header-image"
+              ></div>
+            </div>
+  
+            <div class="form__outline-box--bottom form__row">
+              <div class="form__item">
+                <label for="name" class="form__label">Name *</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  size="30"
+                  required
+                  class="form__input"
+                />
+              </div>
+            </div>
+            <div class="form__outline-box--bottom form__row">
+              <div class="form__column">
+                <div class="form__item">
+                  <label for="classFee" class="form__label">Class Fee *  $</label>
+                  <select name="classFee" id="classFee">
+                    <option value="500">5.00</option>
+                    <option value="750">7.50</option>
+                    <option value="0">0.00</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form__column">
+                <div class="form__row">
+                  <div class="">
+                    <label for="firstSemesterMaterials" class="form__label"
+                      >Semester 1 Materials *  $</label
+                    >
+                  </div>
+                  <div>
+                    <input
+                      type="text"
+                      id="firstSemesterMaterials"
+                      name="firstSemesterMaterials"
+                      size="5"
+                      pattern="[0-9]{1,2}.[0-9]{2}"
+                      value="0.00"
+                      class="form__input form__input--inline"
+                    />
+                  </div>
+  
+                  <div class="form__row">
+                    <div>
+                      <label for="secondSemesterMaterials" class="form__label"
+                        >Semester 2 Materials *  $</label
+                      >
+                    </div>
+                    <div>
+                      <input
+                        type="text"
+                        id="secondSemesterMaterials"
+                        name="secondSemesterMaterials"
+                        size="5"
+                        pattern="[0-9]{2}.[0-9]{2}"
+                        value="0.00"
+                        class="form__input form__input--inline"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="form__outline-box--bottom form__row">
+              <div class="form__column">
+                <div class="form__dropdown-group">
+                  <div class="form__item">
+                    <label for="gradeMin" class="form__label">Grade Min *</label>
+                    <select name="gradeMin" id="gradeMin">
+                      <option value="Infant">Infant</option>
+                      <option value="Toddler">Toddler</option>
+                      <option value="PreK3">PreK3</option>
+                      <option value="PreK4">PreK4</option>
+                      <option value="K" selected>K</option>
+                      <option value="1st">1st</option>
+                      <option value="2nd">2nd</option>
+                      <option value="3rd">3rd</option>
+                      <option value="4th">4th</option>
+                      <option value="5th">5th</option>
+                      <option value="6th">6th</option>
+                      <option value="7th">7th</option>
+                      <option value="8th">8th</option>
+                      <option value="9th">9th</option>
+                      <option value="10th">10th</option>
+                      <option value="11th">11th</option>
+                      <option value="12th">12th</option>
+                      <option value="Adult">Adult</option>
+                    </select>
+                  </div>
+                  <div class="form__item">
+                    <label for="gradeMax" class="form__label">Grade Max *</label>
+                    <select name="gradeMax" id="gradeMax">
+                      <option value="Infant">Infant</option>
+                      <option value="Toddler">Toddler</option>
+                      <option value="PreK3">PreK3</option>
+                      <option value="PreK4">PreK4</option>
+                      <option value="K">K</option>
+                      <option value="1st">1st</option>
+                      <option value="2nd">2nd</option>
+                      <option value="3rd">3rd</option>
+                      <option value="4th">4th</option>
+                      <option value="5th">5th</option>
+                      <option value="6th">6th</option>
+                      <option value="7th">7th</option>
+                      <option value="8th">8th</option>
+                      <option value="9th">9th</option>
+                      <option value="10th">10th</option>
+                      <option value="11th">11th</option>
+                      <option value="12th" selected>12th</option>
+                      <option value="Adult">Adult</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="form__column">
+                <div class="form__dropdown-group">
+                  <div class="form__item">
+                    <label for="classSizeMin" class="form__label"
+                      >Class Size Min * </label
+                    >
+                    <select name="classSizeMin" id="classSizeMin">
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                    </select>
+                  </div>
+  
+                  <div class="form__item">
+                    <label for="classSizeMax" class="form__label"
+                      >Class Size Max * </label
+                    >
+                    <select name="classSizeMax" id="classSizeMax">
+                      <option value="12">12</option>
+                      <option value="10">10</option>
+                      <option value="8">8</option>
+                      <option value="6">6</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div>
+              <div class="form__row">
+                <div class="form__item">
+                  <label for="description" class="form__label"
+                    >Description *</label
+                  >
+                  <textarea
+                    id="description"
+                    name="description"
+                    rows="3"
+                    cols="70"
+                    required
+                    
+                    class="form__input"
+                  >
+                  </textarea>
+                </div>
+              </div>
+              <div class="form__row">
+                <div class="form__item">
+                  <label for="materials" class="form__label"
+                    >Required Materials:</label
+                  >
+                  <textarea
+                    id="materials"
+                    name="materials"
+                    rows="2"
+                    cols="30"
+                    class="form__input"
+                  >
+                  </textarea>
+                </div>
+              
+                <div class="form__item">
+                  <label for="texts" class="form__label">Required texts:</label>
+                  <textarea
+                    id="texts"
+                    name="texts"
+                    rows="2"
+                    cols="30"
+                    class="form__input"
+                  >
+                  </textarea>
+                </div>
+              </div>
+              <div class="form__row">
+                <input type="submit" value-"Submit" class="form__button
+                form__item--center">
+                <button id="cancel" class="form__button form__cancel">X</button>
+              </div>
+            </div>
+          </div>
+        </div>
+       
+      </section>
+   
+
+     
+
+      
+
+        
+    
+    </div>
+  </body>
+</html>

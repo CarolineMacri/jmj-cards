@@ -1,3 +1,6 @@
+@import 'components/tables';
+@include edit-table(courses, course);
+
 .courses {
   padding: 2rem 5rem;
   display: flex;
