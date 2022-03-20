@@ -376,7 +376,8 @@ option {
   }
 }
 
-.button {
+.button,
+.button-ok {
   background-color: $color-primary;
   color: white;
   //width: 8rem;
