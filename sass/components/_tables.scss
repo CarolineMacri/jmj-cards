@@ -1,6 +1,4 @@
-@mixin edit-table($plural-name, $singular-name) {
-
-  .#{$plural-name} {
+@mixin edit-table($plural-name, $singular-name) {  .#{$plural-name} {
     table {
       font-size: 2rem;
       margin: 5rem auto;
@@ -50,6 +48,10 @@
     }
     .new {
       text-align: center;
+      a: {
+        text-decoration: none;
+      }
+
       &:hover {
         transform: scale(1.5);
         color: $color-tertiary;
@@ -60,8 +62,11 @@
   .#{$singular-name} {
     &-profile {
       &__form {
-        width: max-content;
+        width: 50%;
       }
+        &--wide{
+          width:90%;
+        }
     }
     &-delete {
       &__modal {

@@ -1,0 +1,31 @@
+@import 'components/tables';
+@include edit-table(enrollments, enrollment);
+
+.enrollments {
+  padding: 2rem 5rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 7rem;
+
+  &__title{
+    text-align: center;
+  }
+
+  .enrollment_card{
+    &__grades, &__semesters{
+      display: flex;
+      justify-content: left;
+    }
+    &__header-text{
+      max-width: 40rem;
+      white-space: normal;
+    }
+  }
+
+}
+
+.year-selector {
+  display: flex;
+  justify-content: center;
+}

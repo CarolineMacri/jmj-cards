@@ -1,0 +1,54 @@
+.enrollment{
+  padding: 2rem 5rem;
+  background-color: $color-tertiary-extra-light;
+  
+  &__title{
+    text-align: center;
+  }
+  &__dropdown{
+    background-color:white; 
+    width: max-content;
+    text-align: center;
+    margin: 0 auto;
+  } 
+  &__parents {
+  padding: 5rem; 
+  display: flex; 
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 7rem;
+  }  
+  &__children {
+    padding: 1rem; 
+    display: flex; 
+    justify-content: center;
+    flex-wrap: wrap;
+  
+    gap: 7rem;
+    
+    }  
+}
+
+.class{
+  display:flex;
+
+  &__group{
+    background-color:$color-primary-extra-light;
+  }
+
+  &__time{
+    flex:1;
+    text-align: right;
+  }
+
+  &__name{
+    flex: 2;
+    padding-left: 1rem;
+    text-align: left;
+  }
+}
+
+.year-selector{
+  display: flex;
+  justify-content: center;
+}
