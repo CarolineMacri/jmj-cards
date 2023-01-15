@@ -104,3 +104,17 @@ main{
 
  
 }
+
+@media print {
+  .header {
+    display: none; }
+  .footer {
+    display: none; }
+  .side-nav {
+    display: none; }
+  .report__column {
+    page-break-inside: avoid; } }
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  html {
+    font-size: 50%; } }
