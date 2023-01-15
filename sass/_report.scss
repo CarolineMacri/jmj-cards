@@ -1,31 +1,101 @@
 .report {
-  padding: 2rem 5rem;
+  padding: 0.5in 0.5in;
+  width: 8.5in;
   display: flex;
   justify-content: left;
   flex-wrap: wrap;
   gap: 7rem;
 
-  &__title{
-    text-align: center;
+  &__box {
+    border: 1px solid black;
+    border-radius: 3px;
+    break-inside: avoid;
+    margin: auto;
   }
 
-  &__column{
+  &__title {
+    background-color: lightGray;
+  }
+
+  &__column {
     text-align: left;
   }
-
-  .course_card{
-    &__grades, &__semesters{
-      display: flex;
-      justify-content: left;
-    }
-    &__header-text{
-      max-width: 40rem;
-      white-space: normal;
-    }
-  }
-
 }
 
+.report-class-lists {
+  width: 8.5in;
+  margin: 0.5in;
+  &-box {
+    border: 1px solid black;
+    margin: 1rem 0 0 0;
+    break-inside: avoid;
+  }
+  &-hour {
+    break-after: page;
+  }
+  &-course {
+    display: flex;
+    flex-direction: row;
+    background-color: #f8f8fb;
+    &-name {
+      flex: auto;
+      padding: 0 1rem;
+    }
+    &-hour,
+    &-location {
+      flex: initial;
+      padding: 0 1rem;
+    }
+  }
+  &-enrollments {
+    padding: 0 1rem;
+    break-inside: avoid;
+  }
+  &-enrollment {
+    margin: 0;
+    padding: 0 3rem;
+    font-size: 1.5rem;
+  }
+}
+
+.report-invoices {
+  width: 8.5in;
+  margin: 0.5in;
+  &-box {
+    border: 1px solid black;
+    margin: 1rem 0 0 0;
+    break-inside: avoid;
+  }
+  &-family {
+    background-color: #f8f8fb;
+  }
+  &-teacher {
+    margin: 0;
+    padding: 0 3rem;
+    font-size: 2 rem;
+    font-style: italic;
+    font-weight: bold;
+  }
+  &-classes {
+    padding: 0 6rem;
+    break-inside: avoid;
+  }
+  &-record {
+    display: flex;
+    flex-direction: row;
+
+    &-class {
+      flex: auto;
+      padding: 0 1rem;
+    }
+    &-student,
+    &-price,
+    &-materials {
+      flex: initial;
+      padding: 0 1rem;
+    }
+  }
+}
 .year-selector {
   display: flex;
   justify-content: center;

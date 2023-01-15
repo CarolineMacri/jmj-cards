@@ -915,21 +915,76 @@ option {
   justify-content: center; }
 
 .report {
-  padding: 2rem 5rem;
+  padding: 0.5in 0.5in;
+  width: 8.5in;
   display: flex;
   justify-content: left;
   flex-wrap: wrap;
   gap: 7rem; }
+  .report__box {
+    border: 1px solid black;
+    border-radius: 3px;
+    break-inside: avoid;
+    margin: auto; }
   .report__title {
-    text-align: center; }
+    background-color: lightGray; }
   .report__column {
     text-align: left; }
-  .report .course_card__grades, .report .course_card__semesters {
+
+.report-class-lists {
+  width: 8.5in;
+  margin: 0.5in; }
+  .report-class-lists-box {
+    border: 1px solid black;
+    margin: 1rem 0 0 0;
+    break-inside: avoid; }
+  .report-class-lists-hour {
+    break-after: page; }
+  .report-class-lists-course {
     display: flex;
-    justify-content: left; }
-  .report .course_card__header-text {
-    max-width: 40rem;
-    white-space: normal; }
+    flex-direction: row;
+    background-color: #f8f8fb; }
+    .report-class-lists-course-name {
+      flex: auto;
+      padding: 0 1rem; }
+    .report-class-lists-course-hour, .report-class-lists-course-location {
+      flex: initial;
+      padding: 0 1rem; }
+  .report-class-lists-enrollments {
+    padding: 0 1rem;
+    break-inside: avoid; }
+  .report-class-lists-enrollment {
+    margin: 0;
+    padding: 0 3rem;
+    font-size: 1.5rem; }
+
+.report-invoices {
+  width: 8.5in;
+  margin: 0.5in; }
+  .report-invoices-box {
+    border: 1px solid black;
+    margin: 1rem 0 0 0;
+    break-inside: avoid; }
+  .report-invoices-family {
+    background-color: #f8f8fb; }
+  .report-invoices-teacher {
+    margin: 0;
+    padding: 0 3rem;
+    font-size: 2 rem;
+    font-style: italic;
+    font-weight: bold; }
+  .report-invoices-classes {
+    padding: 0 6rem;
+    break-inside: avoid; }
+  .report-invoices-record {
+    display: flex;
+    flex-direction: row; }
+    .report-invoices-record-class {
+      flex: auto;
+      padding: 0 1rem; }
+    .report-invoices-record-student, .report-invoices-record-price, .report-invoices-record-materials {
+      flex: initial;
+      padding: 0 1rem; }
 
 .year-selector {
   display: flex;
