@@ -8,18 +8,30 @@
     padding: 2rem;
   }
 
+ 
   &__heading {
     color: $color-secondary-light; 
     font-style: italic;
+  
   }
 
   &__item {
+    display:none;
     padding-left: 1rem;
     font-size: 1.5rem;
     color: white;
+    z-index: 0;
 
     &:hover {
       border-left: 2px solid white;
     }
   }
 }
+.side-nav__section:hover {
+
+  .side-nav__item {
+    display:block;
+  }
+}
+
+

@@ -1,49 +1,74 @@
-#class_grid {
-  display: grid;
-  border: 1px black;
+.class-grid {
+  display: grid; 
+  grid-gap:1rem;
+  padding: 2rem 0 0 0;
 
-  grid-template-columns: repeat(2, max-content);
-  grid-template-areas: 'blank 0900' 'classroom1 classroom1-9am' 'classroom2 classroom2-9am' 'classroom3 classroom3-9am';
+  &__location,
+  &__hour {
+    color:$color-secondary-light;
+    background-color:  $color-primary-dark;
+    font-size: 1.2rem;
+    font-style:italic;
+    border-radius: 3px;
+  }
 
-  div {
-    font-size: 3rem;
-    margin: 3px;
-    border: 3px black;
-    background-color: antiquewhite;
+  &__location{ 
+    text-align: center;
+    padding: 0 .3rem;
+  }
+
+  &__hour{ 
+    text-align: right;
+    padding: 3rem .5rem
+  }
+  
+  &__item{ 
+    box-shadow: 1px 1px 2px 1px rgba($color-primary-light, 0.7);
+    text-align: center;
+    color: black;
+  }
+
+  &__course{ 
+    background-color: $color-primary-light;
+  }
+
+  &__grades{ 
+    font-size: 1.2rem;
+    font-style: italic;
   }
 }
 
-@use "sass.string";
+// @use "sass.string";
 
-$locations:'header', 'class1', 'class2', 'class3', 'cafe1', 'cafe2','cafe3','cafe4','cafe5','cafe6','conf','music','stage','wysz';
-$times: '9AM','10AM','11AM';
-$areas: '';
+// $locations:'header', 'class1', 'class2', 'class3', 'cafe1', 'cafe2','cafe3','cafe4','cafe5','cafe6','conf','music','stage','wysz';
+// $times: '9AM','10AM','11AM';
+// $areas: '';
 
-@each $loc in $locations {
-    $areas:  $areas + '"'  + $loc;
-        @each $time in $times{
-        $areas: $areas + ' ' + $loc + '-' + $time;
-    };
-    $areas: $areas + '"';
-}
+// @each $loc in $locations {
+//     $areas:  $areas + '"'  + $loc;
+//         @each $time in $times{
+//         $areas: $areas + ' ' + $loc + '-' + $time;
+//     };
+//     $areas: $areas + '"';
+// }
 
 
-#class_grid_test {
-    display: grid;
-    background-color: antiquewhite;
+// #class_grid_test {
+//     display: grid;
+//     background-color: antiquewhite;
   
-    grid-template-columns: repeat(3, minmax(min-content));
-    grid-template-areas: unquote($areas);
+//     grid-template-columns: repeat(3, minmax(min-content));
+//     grid-template-areas: unquote($areas);
   
-    div {
-      font-size: 2rem;
-      margin: 3px;
-      background-color: white;
-      text-align: center;
-    }
+//     div {
+//       font-size: 2rem;
+//       margin: 3px;
+//       background-color: white;
+//       text-align: center;
+//     }
 
-    .label{
-        font-size:3rem;
-        background-color: lightblue;
-    }
-  }
+//     .label{
+//         font-size:3rem;
+//         background-color: lightblue;
+//     }
+//   }
