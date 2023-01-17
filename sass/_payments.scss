@@ -9,11 +9,11 @@
   gap: 7rem;
 
   &__title{
-    text-align: center;
+    text-align: center; 
   }
 
   .payment_card{
-    &__grades, &__semesters{
+    &__grades, &__semesters{ 
       display: flex;
       justify-content: left;
     }

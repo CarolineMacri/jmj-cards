@@ -364,6 +364,17 @@
 
   &__radio-input {
   }
+
+  &__option{
+    font-style:italic;
+    font-weight:bold;
+    
+    &:disabled{
+      color:$color-gray-light-1;
+      font-style:normal;
+      font-weight: normal;
+    }
+  }
 }
 
 select {
