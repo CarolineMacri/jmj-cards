@@ -1,5 +1,4 @@
-.report {
-  padding: 0.5in 0.5in;
+.report {  padding: 0.5in 0.5in;
   width: 8.5in;
   display: flex;
   justify-content: left;
@@ -93,6 +92,62 @@
     &-materials {
       flex: initial;
       padding: 0 1rem;
+    }
+  }
+}
+
+.report-courses {
+  width: 8.5in;
+  margin: 0.5in;
+  &-box {
+    border: 1px solid black;
+    margin: 1rem 0 0 0;
+    break-inside: avoid;
+  }
+  &-course {
+    background-color: #f8f8fb;
+  }
+  &-name {
+    margin: 0;
+    padding: 0 3rem;
+    font-size: 2 rem;
+    font-style: italic;
+    font-weight: bold;
+  }
+  &-courses {
+    padding: 0 3rem;
+    break-inside: avoid;
+    background-color: white;
+  }
+  &-column{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+  }
+  &-row{
+    display:flex;
+    flex-direction:row;
+  }
+  &-record {
+  
+    display: flex;
+    flex-direction: row;
+
+    &-item {
+      flex: 1;
+      padding: 0 1rem;
+
+      &__first {
+        flex: 1;
+        padding: 0 1rem;
+      }
+      &__last{
+        flex: auto;
+      }
+      &__right{
+        flex:1;
+        text-align: right;
+      }
     }
   }
 }

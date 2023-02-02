@@ -57,6 +57,20 @@ main {
     display: flex;
     flex-direction: column; }
 
+@media print {
+  .header {
+    display: none; }
+  .footer {
+    display: none; }
+  .side-nav {
+    display: none; }
+  .report__column {
+    page-break-inside: avoid; } }
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  html {
+    font-size: 50%; } }
+
 .card {
   background-color: white;
   box-shadow: 1px 1px 3px 1px rgba(28, 52, 110, 0.2);
@@ -296,6 +310,13 @@ main {
     background-color: #eee;
     color: #aaa;
     cursor: not-allowed; }
+  .form__option {
+    font-style: italic;
+    font-weight: bold; }
+    .form__option:disabled {
+      color: #aaa;
+      font-style: normal;
+      font-weight: normal; }
 
 select {
   border: 1px solid #c78b37;
@@ -915,19 +936,196 @@ option {
   justify-content: center; }
 
 .report {
-  padding: 2rem 5rem;
+  padding: 0.5in 0.5in;
+  width: 8.5in;
   display: flex;
   justify-content: left;
   flex-wrap: wrap;
   gap: 7rem; }
+  .report__box {
+    border: 1px solid black;
+    border-radius: 3px;
+    break-inside: avoid;
+    margin: auto; }
   .report__title {
-    text-align: center; }
+    background-color: lightGray; }
   .report__column {
     text-align: left; }
-  .report .course_card__grades, .report .course_card__semesters {
+
+.report-class-lists {
+  width: 8.5in;
+  margin: 0.5in; }
+  .report-class-lists-box {
+    border: 1px solid black;
+    margin: 1rem 0 0 0;
+    break-inside: avoid; }
+  .report-class-lists-hour {
+    break-after: page; }
+  .report-class-lists-course {
+    display: flex;
+    flex-direction: row;
+    background-color: #f8f8fb; }
+    .report-class-lists-course-name {
+      flex: auto;
+      padding: 0 1rem; }
+    .report-class-lists-course-hour, .report-class-lists-course-location {
+      flex: initial;
+      padding: 0 1rem; }
+  .report-class-lists-enrollments {
+    padding: 0 1rem;
+    break-inside: avoid; }
+  .report-class-lists-enrollment {
+    margin: 0;
+    padding: 0 3rem;
+    font-size: 1.5rem; }
+
+.report-invoices {
+  width: 8.5in;
+  margin: 0.5in; }
+  .report-invoices-box {
+    border: 1px solid black;
+    margin: 1rem 0 0 0;
+    break-inside: avoid; }
+  .report-invoices-family {
+    background-color: #f8f8fb; }
+  .report-invoices-teacher {
+    margin: 0;
+    padding: 0 3rem;
+    font-size: 2 rem;
+    font-style: italic;
+    font-weight: bold; }
+  .report-invoices-classes {
+    padding: 0 6rem;
+    break-inside: avoid; }
+  .report-invoices-record {
+    display: flex;
+    flex-direction: row; }
+    .report-invoices-record-class {
+      flex: auto;
+      padding: 0 1rem; }
+    .report-invoices-record-student, .report-invoices-record-price, .report-invoices-record-materials {
+      flex: initial;
+      padding: 0 1rem; }
+
+.report-courses {
+  width: 8.5in;
+  margin: 0.5in; }
+  .report-courses-box {
+    border: 1px solid black;
+    margin: 1rem 0 0 0;
+    break-inside: avoid; }
+  .report-courses-course {
+    background-color: #f8f8fb; }
+  .report-courses-name {
+    margin: 0;
+    padding: 0 3rem;
+    font-size: 2 rem;
+    font-style: italic;
+    font-weight: bold; }
+  .report-courses-courses {
+    padding: 0 3rem;
+    break-inside: avoid;
+    background-color: white; }
+  .report-courses-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column; }
+  .report-courses-row {
+    display: flex;
+    flex-direction: row; }
+  .report-courses-record {
+    display: flex;
+    flex-direction: row; }
+    .report-courses-record-item {
+      flex: 1;
+      padding: 0 1rem; }
+      .report-courses-record-item__first {
+        flex: 1;
+        padding: 0 1rem; }
+      .report-courses-record-item__last {
+        flex: auto; }
+      .report-courses-record-item__right {
+        flex: 1;
+        text-align: right; }
+
+.year-selector {
+  display: flex;
+  justify-content: center; }
+
+.payments table {
+  font-size: 2rem;
+  margin: 5rem auto; }
+
+.payments th {
+  background-color: #2f4885;
+  color: #ffd293;
+  font-style: italic;
+  padding: 0 2rem; }
+
+.payments tr {
+  background-color: white; }
+  .payments tr:hover {
+    background-color: #cfd1e2; }
+
+.payments td {
+  background-color: inherit;
+  border: 1px solid gray;
+  font-size: 2rem;
+  padding: 0 0.5rem; }
+
+.payments .button {
+  background-color: white; }
+
+.payments .edit {
+  color: #2f4885;
+  padding: 0.2rem 0.5rem; }
+  .payments .edit:hover {
+    transform: scale(1.5);
+    color: green; }
+
+.payments .delete {
+  padding: 0 0.4rem;
+  color: #c7a337; }
+  .payments .delete:hover {
+    transform: scale(1.5);
+    color: red; }
+
+.payments .new {
+  text-align: center;
+  a-text-decoration: none; }
+  .payments .new:hover {
+    transform: scale(1.5);
+    color: #c7a337; }
+
+.payment-profile__form {
+  width: 50%; }
+
+.payment-profile--wide {
+  width: 90%; }
+
+.payment-delete__modal {
+  background-color: white;
+  padding: 1rem 2rem 0rem;
+  border-radius: 2px;
+  text-align: center; }
+
+.payment-delete__warning {
+  color: red;
+  font-size: 3rem;
+  font-weight: bolder; }
+
+.payments {
+  padding: 2rem 5rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 7rem; }
+  .payments__title {
+    text-align: center; }
+  .payments .payment_card__grades, .payments .payment_card__semesters {
     display: flex;
     justify-content: left; }
-  .report .course_card__header-text {
+  .payments .payment_card__header-text {
     max-width: 40rem;
     white-space: normal; }
 
@@ -1117,11 +1315,16 @@ option {
     color: #ffd293;
     font-style: italic; }
   .side-nav__item {
+    display: none;
     padding-left: 1rem;
     font-size: 1.5rem;
-    color: white; }
+    color: white;
+    z-index: 0; }
     .side-nav__item:hover {
       border-left: 2px solid white; }
+
+.side-nav__section:hover .side-nav__item {
+  display: block; }
 
 .footer {
   background-color: #1c346e;
@@ -1131,28 +1334,28 @@ option {
   font-style: italic;
   text-align: center; }
 
-#class_grid {
+.class-grid {
   display: grid;
-  border: 1px black;
-  grid-template-columns: repeat(2, max-content);
-  grid-template-areas: 'blank 0900' 'classroom1 classroom1-9am' 'classroom2 classroom2-9am' 'classroom3 classroom3-9am'; }
-  #class_grid div {
-    font-size: 3rem;
-    margin: 3px;
-    border: 3px black;
-    background-color: antiquewhite; }
-
-@use "sass.string";
-#class_grid_test {
-  display: grid;
-  background-color: antiquewhite;
-  grid-template-columns: repeat(3, minmax(min-content));
-  grid-template-areas: "header header-9AM header-10AM header-11AM""class1 class1-9AM class1-10AM class1-11AM""class2 class2-9AM class2-10AM class2-11AM""class3 class3-9AM class3-10AM class3-11AM""cafe1 cafe1-9AM cafe1-10AM cafe1-11AM""cafe2 cafe2-9AM cafe2-10AM cafe2-11AM""cafe3 cafe3-9AM cafe3-10AM cafe3-11AM""cafe4 cafe4-9AM cafe4-10AM cafe4-11AM""cafe5 cafe5-9AM cafe5-10AM cafe5-11AM""cafe6 cafe6-9AM cafe6-10AM cafe6-11AM""conf conf-9AM conf-10AM conf-11AM""music music-9AM music-10AM music-11AM""stage stage-9AM stage-10AM stage-11AM""wysz wysz-9AM wysz-10AM wysz-11AM"; }
-  #class_grid_test div {
-    font-size: 2rem;
-    margin: 3px;
-    background-color: white;
-    text-align: center; }
-  #class_grid_test .label {
-    font-size: 3rem;
-    background-color: lightblue; }
+  grid-gap: 1rem;
+  padding: 2rem 0 0 0; }
+  .class-grid__location, .class-grid__hour {
+    color: #ffd293;
+    background-color: #1c346e;
+    font-size: 1.2rem;
+    font-style: italic;
+    border-radius: 3px; }
+  .class-grid__location {
+    text-align: center;
+    padding: 0 .3rem; }
+  .class-grid__hour {
+    text-align: right;
+    padding: 3rem .5rem; }
+  .class-grid__item {
+    box-shadow: 1px 1px 2px 1px rgba(207, 209, 226, 0.7);
+    text-align: center;
+    color: black; }
+  .class-grid__course {
+    background-color: #cfd1e2; }
+  .class-grid__grades {
+    font-size: 1.2rem;
+    font-style: italic; }
