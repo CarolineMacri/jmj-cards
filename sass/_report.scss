@@ -151,6 +151,43 @@
     }
   }
 }
+
+.report-payments {
+  width: 8.5in;
+  margin: 0.5in;
+  &-box {
+    border: 1px solid black;
+    margin: 1rem 0 0 0;
+    break-inside: avoid;
+  }
+  &-teacher {
+    background-color: #f8f8fb;
+  }
+  &-parent {
+    margin: 0;
+    padding: 0 3rem;
+    font-size: 2 rem;
+    font-style: italic;
+    font-weight: bold;
+  }
+  &-payments {
+    padding: 0 6rem;
+    break-inside: avoid;
+  }
+  &-record {
+    display: flex;
+    flex-direction: row;
+
+    &-check {
+      flex: auto;
+      padding: 0 1rem;
+    }
+    &-amount {
+      flex: initial;
+      padding: 0 1rem;
+    }
+  }
+}
 .year-selector {
   display: flex;
   justify-content: center;

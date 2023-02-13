@@ -653,6 +653,15 @@ option {
   font-size: 3rem;
   font-weight: bolder; }
 
+.children {
+  padding: 2rem 5rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 7rem; }
+  .children__title {
+    text-align: center; }
+
 .courses table {
   font-size: 2rem;
   margin: 5rem auto; }
@@ -1048,6 +1057,34 @@ option {
         flex: 1;
         text-align: right; }
 
+.report-payments {
+  width: 8.5in;
+  margin: 0.5in; }
+  .report-payments-box {
+    border: 1px solid black;
+    margin: 1rem 0 0 0;
+    break-inside: avoid; }
+  .report-payments-teacher {
+    background-color: #f8f8fb; }
+  .report-payments-parent {
+    margin: 0;
+    padding: 0 3rem;
+    font-size: 2 rem;
+    font-style: italic;
+    font-weight: bold; }
+  .report-payments-payments {
+    padding: 0 6rem;
+    break-inside: avoid; }
+  .report-payments-record {
+    display: flex;
+    flex-direction: row; }
+    .report-payments-record-check {
+      flex: auto;
+      padding: 0 1rem; }
+    .report-payments-record-amount {
+      flex: initial;
+      padding: 0 1rem; }
+
 .year-selector {
   display: flex;
   justify-content: center; }
@@ -1325,6 +1362,77 @@ option {
 
 .side-nav__section:hover .side-nav__item {
   display: block; }
+
+.tests table {
+  font-size: 2rem;
+  margin: 5rem auto; }
+
+.tests th {
+  background-color: #2f4885;
+  color: #ffd293;
+  font-style: italic;
+  padding: 0 2rem; }
+
+.tests tr {
+  background-color: white; }
+  .tests tr:hover {
+    background-color: #cfd1e2; }
+
+.tests td {
+  background-color: inherit;
+  border: 1px solid gray;
+  font-size: 2rem;
+  padding: 0 0.5rem; }
+
+.tests .button {
+  background-color: white; }
+
+.tests .edit {
+  color: #2f4885;
+  padding: 0.2rem 0.5rem; }
+  .tests .edit:hover {
+    transform: scale(1.5);
+    color: green; }
+
+.tests .delete {
+  padding: 0 0.4rem;
+  color: #c7a337; }
+  .tests .delete:hover {
+    transform: scale(1.5);
+    color: red; }
+
+.tests .new {
+  text-align: center;
+  a-text-decoration: none; }
+  .tests .new:hover {
+    transform: scale(1.5);
+    color: #c7a337; }
+
+.test-profile__form {
+  width: 50%; }
+
+.test-profile--wide {
+  width: 90%; }
+
+.test-delete__modal {
+  background-color: white;
+  padding: 1rem 2rem 0rem;
+  border-radius: 2px;
+  text-align: center; }
+
+.test-delete__warning {
+  color: red;
+  font-size: 3rem;
+  font-weight: bolder; }
+
+.tests {
+  padding: 2rem 5rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 7rem; }
+  .tests__title {
+    text-align: center; }
 
 .footer {
   background-color: #1c346e;

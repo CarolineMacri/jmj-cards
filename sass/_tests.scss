@@ -1,7 +1,7 @@
 @import 'components/tables';
-@include edit-table(children, child);
+@include edit-table(tests, test);
 
-.children {
+.tests {
   padding: 2rem 5rem;
   display: flex;
   justify-content: center;
