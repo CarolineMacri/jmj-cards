@@ -1085,6 +1085,41 @@ option {
       flex: initial;
       padding: 0 1rem; }
 
+.report-sign-up-sheet {
+  width: 8.5in;
+  margin: 0.5in; }
+  .report-sign-up-sheet-box {
+    border: 1px solid black;
+    margin: 1rem 0 0 0;
+    break-inside: avoid; }
+  .report-sign-up-sheet-time {
+    background-color: #f8f8fb;
+    width: 100%; }
+  .report-sign-up-sheet-cl {
+    margin: 0;
+    font-size: 2 rem;
+    width: 2.75in;
+    border: 1px solid black; }
+  .report-sign-up-sheet-fees {
+    width: 1.125in;
+    border: 1px solid black; }
+    .report-sign-up-sheet-fees .item {
+      display: flex; }
+      .report-sign-up-sheet-fees .item .title {
+        justify-content: left; }
+      .report-sign-up-sheet-fees .item .cost {
+        flex: 1;
+        text-align: right; }
+  .report-sign-up-sheet-record {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: white; }
+    .report-sign-up-sheet-record-box {
+      flex: 1;
+      padding: 0 0rem;
+      border: 1px solid black; }
+
 .year-selector {
   display: flex;
   justify-content: center; }

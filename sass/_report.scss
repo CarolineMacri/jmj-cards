@@ -1,4 +1,5 @@
-.report {  padding: 0.5in 0.5in;
+.report {
+  padding: 0.5in 0.5in;
   width: 8.5in;
   display: flex;
   justify-content: left;
@@ -119,17 +120,16 @@
     break-inside: avoid;
     background-color: white;
   }
-  &-column{
-    flex:1;
+  &-column {
+    flex: 1;
     display: flex;
     flex-direction: column;
   }
-  &-row{
-    display:flex;
-    flex-direction:row;
+  &-row {
+    display: flex;
+    flex-direction: row;
   }
   &-record {
-  
     display: flex;
     flex-direction: row;
 
@@ -141,11 +141,11 @@
         flex: 1;
         padding: 0 1rem;
       }
-      &__last{
+      &__last {
         flex: auto;
       }
-      &__right{
-        flex:1;
+      &__right {
+        flex: 1;
         text-align: right;
       }
     }
@@ -185,6 +185,61 @@
     &-amount {
       flex: initial;
       padding: 0 1rem;
+    }
+  }
+}
+
+.report-sign-up-sheet {
+  width: 8.5in;
+  margin: 0.5in;
+  &-box {
+    border: 1px solid black;
+    margin: 1rem 0 0 0;
+    break-inside: avoid;
+    
+  }
+  &-time {
+    background-color: #f8f8fb;
+    width: 100%;
+  }
+ 
+  &-cl {
+    margin: 0;
+    font-size: 2 rem;
+    width: 2.75in;
+    border: 1px solid black;
+  }
+  &-fees {
+    width: 1.125in;
+    border: 1px solid black;
+  
+
+    .item{
+      display: flex;
+      .title {
+        justify-content: left;
+      }
+      .cost{
+        flex:1;
+        text-align: right;
+      }
+    }
+    }
+
+  &-record {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: white;
+  
+    
+
+    
+
+    &-box {
+      flex: 1;
+      padding: 0 0rem;
+      border: 1px solid black;
     }
   }
 }
