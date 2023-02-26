@@ -1016,6 +1016,34 @@ option {
       flex: initial;
       padding: 0 1rem; }
 
+.report-children-by-grade {
+  width: 8.5in;
+  margin: 0.5in; }
+  .report-children-by-grade-box {
+    border: 1px solid black;
+    margin: 1rem 0 0 0;
+    break-inside: avoid; }
+  .report-children-by-grade-family {
+    background-color: #f8f8fb; }
+  .report-children-by-grade-teacher {
+    margin: 0;
+    padding: 0 3rem;
+    font-size: 2 rem;
+    font-style: italic;
+    font-weight: bold; }
+  .report-children-by-grade-classes {
+    padding: 0 6rem;
+    break-inside: avoid; }
+  .report-children-by-grade-record {
+    display: flex;
+    flex-direction: row; }
+    .report-children-by-grade-record-class {
+      flex: auto;
+      padding: 0 1rem; }
+    .report-children-by-grade-record-student, .report-children-by-grade-record-price, .report-children-by-grade-record-materials {
+      flex: initial;
+      padding: 0 1rem; }
+
 .report-courses {
   width: 8.5in;
   margin: 0.5in; }
@@ -1092,22 +1120,22 @@ option {
     border: 1px solid black;
     margin: 1rem 0 0 0;
     break-inside: avoid; }
-  .report-sign-up-sheet-time {
+  .report-sign-up-sheet-time, .report-sign-up-sheet-family-name, .report-sign-up-sheet-child-name {
     background-color: #f8f8fb;
     width: 100%; }
-  .report-sign-up-sheet-cl {
+  .report-sign-up-sheet-cl, .report-sign-up-sheet-time {
     margin: 0;
     font-size: 2 rem;
     width: 2.75in;
     border: 1px solid black; }
-  .report-sign-up-sheet-fees {
+  .report-sign-up-sheet-fees, .report-sign-up-sheet-family-name {
     width: 1.125in;
     border: 1px solid black; }
-    .report-sign-up-sheet-fees .item {
+    .report-sign-up-sheet-fees .item, .report-sign-up-sheet-family-name .item {
       display: flex; }
-      .report-sign-up-sheet-fees .item .title {
+      .report-sign-up-sheet-fees .item .title, .report-sign-up-sheet-family-name .item .title {
         justify-content: left; }
-      .report-sign-up-sheet-fees .item .cost {
+      .report-sign-up-sheet-fees .item .cost, .report-sign-up-sheet-family-name .item .cost {
         flex: 1;
         text-align: right; }
   .report-sign-up-sheet-record {
@@ -1115,7 +1143,7 @@ option {
     flex-direction: row;
     width: 100%;
     background-color: white; }
-    .report-sign-up-sheet-record-box {
+    .report-sign-up-sheet-record-box, .report-sign-up-sheet-record-child-name {
       flex: 1;
       padding: 0 0rem;
       border: 1px solid black; }
