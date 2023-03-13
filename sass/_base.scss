@@ -1,23 +1,23 @@
 // COLORS
 $color-primary: #2f4885;
 $color-primary-light: #cfd1e2;
-$color-primary-extra-light:#f8f8fb;
-$color-primary-dark: #1c346e; 
+$color-primary-extra-light: #f8f8fb;
+$color-primary-dark: #1c346e;
 
 $color-secondary: #c78b37;
 $color-secondary-light: #ffd293;
 $color-secondary-dark: #7c4a03;
 
 $color-tertiary: #c7a337;
-$color-tertiary-light: #ffe493; 
-$color-tertiary-extra-light: #fffbf0;  
-$color-tertiary-dark: #7c5e03; 
+$color-tertiary-light: #ffe493;
+$color-tertiary-extra-light: #fffbf0;
+$color-tertiary-dark: #7c5e03;
 
 $color-gray-light-1: #aaa;
 $color-gray-light-2: #eee;
 
 $color-gray-dark-1: #888;
-$color-gray-dark-2: #666;  
+$color-gray-dark-2: #666;
 
 $color-black: #000;
 $color-white: #fff;
@@ -34,7 +34,7 @@ h1 {
   font-weight: normal;
 }
 h2 {
-  font-size: 2.5rem; 
+  font-size: 2.5rem;
 }
 h3 {
   font-size: 2rem;
@@ -50,7 +50,7 @@ p {
 *::before,
 *::after {
   margin: 0;
-  padding: 0; 
+  padding: 0;
   box-sizing: inherit;
 }
 
@@ -71,50 +71,56 @@ body {
 
 .container {
   margin: 0 auto;
-} 
+}
 
-textarea{
-  font-family:inherit;
+textarea {
+  font-family: inherit;
   font-size: medium !important;
 }
 
-main{
+main {
   flex: 1;
   display: flex;
 }
-.page{ 
+.page {
   flex: 1;
   display: flex;
 
-  &__nav{
+  &__nav {
     width: 20rem;
-     
-  } 
+  }
 
-  &__content{
-    padding: 5rem; 
-    flex:1;
+  &__content {
+    padding: 2rem;
+    flex: 1;
     display: flex;
     flex-direction: column;
   }
-  
-  &__content-row{
-    
-  }
 
- 
+  &__content-row {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+  }
 }
 
 @media print {
   .header {
-    display: none; }
+    display: none;
+  }
   .footer {
-    display: none; }
+    display: none;
+  }
   .side-nav {
-    display: none; }
+    display: none;
+  }
   .report__column {
-    page-break-inside: avoid; } }
+    page-break-inside: avoid;
+  }
+}
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   html {
-    font-size: 50%; } }
+    font-size: 50%;
+  }
+}

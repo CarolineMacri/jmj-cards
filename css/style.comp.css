@@ -52,10 +52,14 @@ main {
   .page__nav {
     width: 20rem; }
   .page__content {
-    padding: 5rem;
+    padding: 2rem;
     flex: 1;
     display: flex;
     flex-direction: column; }
+  .page__content-row {
+    flex: 1;
+    display: flex;
+    flex-direction: row; }
 
 @media print {
   .header {
@@ -121,7 +125,7 @@ main {
     background-color: #c78b37;
     color: white;
     font-size: 1.5rem;
-    padding: 0px .5rem;
+    padding: 0px 0.5rem;
     margin: 1rem;
     text-decoration: none;
     border: none;
@@ -195,6 +199,14 @@ main {
     width: 90%; }
   .form--row {
     flex-direction: row; }
+  .form__warning {
+    color: red;
+    font-weight: bold;
+    font-size: 2.5rem;
+    visibility: hidden;
+    text-align: center;
+    flex: 1;
+    border: 1px solid red; }
   .form__header-background {
     background-image: linear-gradient(to bottom, #cfd1e2, #2f4885);
     clip-path: polygon(0 0, 100% 0, 100% 50%, 0 80%);
@@ -245,7 +257,7 @@ main {
     border: none;
     border-radius: 5px;
     margin-bottom: 2rem; }
-    .form__button:hover, .form__button:active, .form__button:focus {
+    .form__button:hover {
       outline: none;
       background-color: #cfd1e2;
       cursor: pointer; }
@@ -950,7 +962,8 @@ option {
   display: flex;
   justify-content: left;
   flex-wrap: wrap;
-  gap: 7rem; }
+  gap: 7rem;
+  -webkit-print-color-adjust: exact; }
   .report__box {
     border: 1px solid black;
     border-radius: 3px;
@@ -963,7 +976,8 @@ option {
 
 .report-class-lists {
   width: 8.5in;
-  margin: 0.5in; }
+  margin: 0.5in;
+  -webkit-print-color-adjust: exact; }
   .report-class-lists-box {
     border: 1px solid black;
     margin: 1rem 0 0 0;
@@ -990,7 +1004,8 @@ option {
 
 .report-invoices {
   width: 8.5in;
-  margin: 0.5in; }
+  margin: 0.5in;
+  -webkit-print-color-adjust: exact; }
   .report-invoices-box {
     border: 1px solid black;
     margin: 1rem 0 0 0;
@@ -1016,37 +1031,27 @@ option {
       flex: initial;
       padding: 0 1rem; }
 
-.report-children-by-grade {
+.report-children {
   width: 8.5in;
-  margin: 0.5in; }
-  .report-children-by-grade-box {
+  margin: 0.5in;
+  -webkit-print-color-adjust: exact; }
+  .report-children__box {
     border: 1px solid black;
     margin: 1rem 0 0 0;
     break-inside: avoid; }
-  .report-children-by-grade-family {
+  .report-children__grade {
     background-color: #f8f8fb; }
-  .report-children-by-grade-teacher {
-    margin: 0;
-    padding: 0 3rem;
-    font-size: 2 rem;
-    font-style: italic;
-    font-weight: bold; }
-  .report-children-by-grade-classes {
-    padding: 0 6rem;
-    break-inside: avoid; }
-  .report-children-by-grade-record {
+  .report-children__record {
     display: flex;
     flex-direction: row; }
-    .report-children-by-grade-record-class {
-      flex: auto;
-      padding: 0 1rem; }
-    .report-children-by-grade-record-student, .report-children-by-grade-record-price, .report-children-by-grade-record-materials {
+    .report-children__record__student {
       flex: initial;
       padding: 0 1rem; }
 
 .report-courses {
   width: 8.5in;
-  margin: 0.5in; }
+  margin: 0.5in;
+  -webkit-print-color-adjust: exact; }
   .report-courses-box {
     border: 1px solid black;
     margin: 1rem 0 0 0;
@@ -1059,6 +1064,13 @@ option {
     font-size: 2 rem;
     font-style: italic;
     font-weight: bold; }
+  .report-courses-teacher {
+    margin: 0;
+    padding: 0 3rem;
+    font-size: 2 rem;
+    font-style: normal;
+    font-weight: normal;
+    text-align: right; }
   .report-courses-courses {
     padding: 0 3rem;
     break-inside: avoid;
@@ -1087,7 +1099,8 @@ option {
 
 .report-payments {
   width: 8.5in;
-  margin: 0.5in; }
+  margin: 0.5in;
+  -webkit-print-color-adjust: exact; }
   .report-payments-box {
     border: 1px solid black;
     margin: 1rem 0 0 0;
@@ -1115,13 +1128,15 @@ option {
 
 .report-sign-up-sheet {
   width: 8.5in;
-  margin: 0.5in; }
+  margin: 0.5in;
+  -webkit-print-color-adjust: exact;
+  font-size: 1.2rem; }
   .report-sign-up-sheet-box {
     border: 1px solid black;
     margin: 1rem 0 0 0;
     break-inside: avoid; }
   .report-sign-up-sheet-time, .report-sign-up-sheet-family-name, .report-sign-up-sheet-child-name {
-    background-color: #f8f8fb;
+    background-color: #eee;
     width: 100%; }
   .report-sign-up-sheet-cl, .report-sign-up-sheet-time {
     margin: 0;
@@ -1138,6 +1153,9 @@ option {
       .report-sign-up-sheet-fees .item .cost, .report-sign-up-sheet-family-name .item .cost {
         flex: 1;
         text-align: right; }
+    .report-sign-up-sheet-fees-header, .report-sign-up-sheet-family-name-header {
+      font-size: 2rem;
+      text-align: center; }
   .report-sign-up-sheet-record {
     display: flex;
     flex-direction: row;
@@ -1147,6 +1165,12 @@ option {
       flex: 1;
       padding: 0 0rem;
       border: 1px solid black; }
+      .report-sign-up-sheet-record-box__filled, .report-sign-up-sheet-record-child-name__filled {
+        background-color: #aaa; }
+      .report-sign-up-sheet-record-box-header, .report-sign-up-sheet-record-child-name-header {
+        font-size: 1rem;
+        text-align: center;
+        background-color: #eee; }
 
 .year-selector {
   display: flex;
