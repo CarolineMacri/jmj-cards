@@ -419,6 +419,30 @@ option {
     color: #cfd1e2;
     cursor: pointer; }
 
+.tooltip {
+  position: relative;
+  /* making the .tooltip span a container for the tooltip text */ }
+  .tooltip:before {
+    content: attr(data-text);
+    /* here's the magic */
+    position: absolute;
+    /* vertically center */
+    top: 50%;
+    transform: translateY(-50%);
+    /* move to right */
+    left: 100%;
+    margin-left: 15px;
+    /* and add a small left margin */
+    /* basic styles */
+    width: 200px;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    display: none;
+    /* hide by default */ }
+  .tooltip:hover:before {
+    display: block; }
+
 .header {
   background-color: #1c346e;
   color: #ffd293;
@@ -527,6 +551,28 @@ option {
   .reset-password__link:hover {
     border-bottom: 2px solid #1c346e; }
 
+.section-splash {
+  height: 90vh;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0.8)), url("/img/oloc.jpg");
+  background-size: cover;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .section-splash * {
+    border-radius: 3px; }
+
+.section-splash {
+  height: 90vh;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0.8)), url("/img/oloc.jpg");
+  background-size: cover;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .section-splash * {
+    border-radius: 3px; }
+
 .error {
   margin: auto;
   width: max-content;
@@ -561,7 +607,7 @@ option {
   padding: 0 2rem; }
 
 .family-card__header-image {
-  background-image: linear-gradient(to bottom, rgba(255, 210, 147, 0.2), rgba(255, 210, 147, 0.3)), url("/img/OLOC.jpg");
+  background-image: linear-gradient(to bottom, rgba(255, 210, 147, 0.2), rgba(255, 210, 147, 0.3)), url("/img/oloc.jpg");
   background-size: cover; }
 
 .family {
@@ -1126,6 +1172,23 @@ option {
       flex: initial;
       padding: 0 1rem; }
 
+.report-teachers {
+  width: 8.5in;
+  margin: 0.5in;
+  -webkit-print-color-adjust: exact; }
+  .report-teachers-box {
+    border: 1px solid black;
+    margin: 1rem 0 0 0;
+    break-inside: avoid; }
+  .report-teachers-teacher {
+    background-color: #f8f8fb; }
+  .report-teachers-record {
+    display: flex;
+    flex-direction: row; }
+    .report-teachers-record-bio {
+      flex: auto;
+      padding: 0 1rem; }
+
 .report-sign-up-sheet {
   width: 8.5in;
   margin: 0.5in;
@@ -1257,6 +1320,87 @@ option {
   display: flex;
   justify-content: center; }
 
+.years table {
+  font-size: 2rem;
+  margin: 5rem auto; }
+
+.years th {
+  background-color: #2f4885;
+  color: #ffd293;
+  font-style: italic;
+  padding: 0 2rem; }
+
+.years tr {
+  background-color: white; }
+  .years tr:hover {
+    background-color: #cfd1e2; }
+
+.years td {
+  background-color: inherit;
+  border: 1px solid gray;
+  font-size: 2rem;
+  padding: 0 0.5rem; }
+
+.years .button {
+  background-color: white; }
+
+.years .edit {
+  color: #2f4885;
+  padding: 0.2rem 0.5rem; }
+  .years .edit:hover {
+    transform: scale(1.5);
+    color: green; }
+
+.years .delete {
+  padding: 0 0.4rem;
+  color: #c7a337; }
+  .years .delete:hover {
+    transform: scale(1.5);
+    color: red; }
+
+.years .new {
+  text-align: center;
+  a-text-decoration: none; }
+  .years .new:hover {
+    transform: scale(1.5);
+    color: #c7a337; }
+
+.year-profile__form {
+  width: 50%; }
+
+.year-profile--wide {
+  width: 90%; }
+
+.year-delete__modal {
+  background-color: white;
+  padding: 1rem 2rem 0rem;
+  border-radius: 2px;
+  text-align: center; }
+
+.year-delete__warning {
+  color: red;
+  font-size: 3rem;
+  font-weight: bolder; }
+
+.years {
+  padding: 2rem 5rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 7rem; }
+  .years__title {
+    text-align: center; }
+  .years .year_card__grades, .years .year_card__semesters {
+    display: flex;
+    justify-content: left; }
+  .years .year_card__header-text {
+    max-width: 40rem;
+    white-space: normal; }
+
+.year-selector {
+  display: flex;
+  justify-content: center; }
+
 .teachers table {
   font-size: 2rem;
   margin: 5rem auto; }
@@ -1345,7 +1489,7 @@ option {
     align-items: left;
     padding: 0 2rem; }
   .teacher-card__header-image {
-    background-image: linear-gradient(to bottom, rgba(255, 210, 147, 0.2), rgba(255, 210, 147, 0.3)), url("/img/OLOC.jpg");
+    background-image: linear-gradient(to bottom, rgba(255, 210, 147, 0.2), rgba(255, 210, 147, 0.3)), url("/img/oloc.jpg");
     background-size: cover; }
 
 .user-profile {

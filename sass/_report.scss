@@ -225,6 +225,30 @@
   }
 }
 
+.report-teachers {
+  width: 8.5in;
+  margin: 0.5in;
+  -webkit-print-color-adjust: exact;
+  &-box {
+    border: 1px solid black;
+    margin: 1rem 0 0 0;
+    break-inside: avoid;
+  }
+  &-teacher {
+    background-color: #f8f8fb;
+  }
+  
+  &-record {
+    display: flex;
+    flex-direction: row;
+
+    &-bio {
+      flex: auto;
+      padding: 0 1rem;
+    }
+  }
+}
+
 .report-sign-up-sheet {
   width: 8.5in;
   margin: 0.5in;
